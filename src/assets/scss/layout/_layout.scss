@@ -1,0 +1,12 @@
+.layout {
+  position: relative;
+  background: #3e4c5e;
+
+  & > .content {
+    height: calc(4330px - 100rem);
+  }
+
+  & > .content > div {
+    padding-top: 10rem;
+  }
+}

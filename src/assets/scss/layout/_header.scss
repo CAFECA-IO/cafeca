@@ -1,0 +1,17 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10rem;
+
+  background-color: $color-white ;
+  opacity: 0.1;
+
+  &.active {
+    background: transparent
+      linear-gradient(90deg, $color-grey-1, $color-grey-2 100%) 0% 0% no-repeat
+      padding-box;
+    opacity: 1;
+  }
+}
