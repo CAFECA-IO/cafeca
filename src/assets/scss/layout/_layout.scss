@@ -1,6 +1,6 @@
 .layout {
   position: relative;
-  background: #3e4c5e;
+//   background: #3e4c5e;
 
   &__content {
     padding-top: 10rem;
@@ -15,7 +15,7 @@
     width: 100%;
     height: 100vh;
     z-index: 10;
-    background: #00000065;
+    // background: #00000065;
   }
   &.active > &__backdrop {
     display: block;

@@ -33,9 +33,9 @@ const Layout = ({ children }) => {
 
   return (
     <div className={`layout${menuOpen ? " active" : ""}`}>
-      <Menu menuOpen={menuOpen} closeMenuHandler={closeMenuHandler} />
       <div className="layout__content">{children}</div>
       <div className="layout__backdrop" onClick={closeMenuHandler}></div>
+      <Menu menuOpen={menuOpen} closeMenuHandler={closeMenuHandler} />
       <Header menuOpen={menuOpen} toggleMenuHandler={toggleMenuHandler} />
     </div>
   );

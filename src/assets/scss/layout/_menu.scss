@@ -1,31 +1,39 @@
 .menu {
   position: fixed;
   padding: 2rem 2.5rem;
+  //   height: calc(100vh - 10rem);
   height: 100vh;
   width: 40rem;
-  top: 0;
+  //   top: 10rem;
+  top: 0rem;
   right: 0;
-
-  padding-top: 10rem;
   text-align: center;
   display: flex;
   flex-direction: column;
-  background-color: rgba($color: #3e4c5e, $alpha: 0.1);
+  color: #fff;
+  padding-top: 10rem;
+  //   background-color: rgba(#3e4c5e, 0.1);
+  background: rgba($color-grey-2, 0.3) 0% 0% no-repeat padding-box;
   box-shadow: inset 0px 10px 6px #00000029;
   transform: translateX(40rem);
+  transition: transform 0.5s ease-in-out;
+  z-index: 100;
+  justify-content: space-between;
 
   &.active {
     transform: translateX(0rem);
   }
 
   &__item {
-    padding: 2.5rem 0;
     font-size: 20px;
-    border-bottom: 1px solid #707070;
+    border-bottom: 1px solid #fff;
   }
   &__link {
+    padding: 2.5rem 0;
+    display: block;
   }
   &__text {
+    margin-bottom: 10rem;
     text-align: right;
   }
 }
