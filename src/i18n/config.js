@@ -45,7 +45,7 @@ i18n
   .init({
     detection: DETECTION_OPTIONS,
     resources,
-    fallbackLng: "en_us",
+    fallbackLng: "zh_tw",
     ns: ["translations"],
     defaultNS: "translations",
     supportedLngs: ["en_us", "jp", "zh_cn", "zh_hk", "zh_tw"],
