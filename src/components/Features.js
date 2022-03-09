@@ -10,25 +10,25 @@ const Features = (props) => {
       </h2>
       <ul className="features__tabs">
         <li className="features__tab active">
-          <h4 className="header-primary header-primary--white">
+          <h4 className="header-primary">
             {t("financial")}
           </h4>
         </li>
         <li className="features__tab">
-          <h4 className="header-primary header-primary--white">{t("rent")}</h4>
+          <h4 className="header-primary">{t("rent")}</h4>
         </li>
         <li className="features__tab">
-          <h4 className="header-primary header-primary--white">
+          <h4 className="header-primary">
             {t("travel")}
           </h4>
         </li>
         <li className="features__tab">
-          <h4 className="header-primary header-primary--white">
+          <h4 className="header-primary">
             {t("government")}
           </h4>
         </li>
         <li className="features__tab">
-          <h4 className="header-primary header-primary--white">
+          <h4 className="header-primary">
             {t("others")}
           </h4>
         </li>

@@ -41,6 +41,7 @@ input:-webkit-autofill:active {
   color: $color-white !important;
   -webkit-text-fill-color: $color-white !important;
 }
+
 textarea {
   border: none;
   overflow: auto;
@@ -80,6 +81,7 @@ html {
 
 body {
   box-sizing: border-box;
+  color: $color-white;
 
   @include respond(tab-port) {
     padding: 0;

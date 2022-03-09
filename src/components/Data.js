@@ -11,7 +11,7 @@ const Data = (props) => {
       <div className="data__container">
         <div className="data__content">
           <div className="data__title">
-            <h5 className="header-secondary header-secondary--white">
+            <h5 className="header-secondary">
               {t("data_title_1")}
             </h5>
           </div>
@@ -19,39 +19,39 @@ const Data = (props) => {
           {/* ++TODO*/}
           {/* https://react.i18next.com/latest/trans-component */}
           <div className="data__text">
-            <h5 className="header-secondary header-secondary--white">
+            <h5 className="header-secondary">
               {t("data_text_1_1")}
             </h5>
             <p className="emphasize--primary">70</p>
-            <h5 className="header-secondary header-secondary--white">
+            <h5 className="header-secondary">
               {t("data_text_1_2")}
             </h5>
           </div>
         </div>
         <div className="data__content">
           <div className="data__title">
-            <h5 className="header-secondary header-secondary--white">
+            <h5 className="header-secondary">
               {t("data_title_2")}
             </h5>
           </div>
           <div className="data__image-box"></div>
           <div className="data__text">
             <p className="emphasize--primary">58.4</p>
-            <h5 className="header-secondary header-secondary--white">
+            <h5 className="header-secondary">
               {t("data_text_2")}
             </h5>
           </div>
         </div>
         <div className="data__content">
           <div className="data__title">
-            <h5 className="header-secondary header-secondary--white">
+            <h5 className="header-secondary">
               {t("data_title_3")}
             </h5>
           </div>
           <div className="data__image-box"></div>
           <div className="data__text">
             <p className="emphasize--primary">6300</p>
-            <h5 className="header-secondary header-secondary--white">
+            <h5 className="header-secondary">
               {t("data_text_3")}
             </h5>
           </div>
