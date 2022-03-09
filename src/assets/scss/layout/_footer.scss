@@ -1,0 +1,29 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 19.5rem;
+  background: #ffffff1a 0% 0% no-repeat padding-box;
+  padding-top: 4rem;
+  padding-left: 15.3rem;
+  padding-right: 4.8rem;
+
+  &__container {
+    display: flex;
+    gap: 10rem;
+  }
+  &__content {
+    display: flex;
+    gap: 2rem;
+  }
+  &__infos {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 19.5rem;
+  }
+  &__copyright {
+    text-align: right;
+  }
+}
