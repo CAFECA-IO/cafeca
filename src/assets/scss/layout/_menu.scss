@@ -10,11 +10,10 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  color: #fff;
+  color: $color-white;
   padding-top: 10rem;
-  //   background-color: rgba(#3e4c5e, 0.1);
-  background: rgba($color-grey-2, 0.3) 0% 0% no-repeat padding-box;
-  box-shadow: inset 0px 10px 6px #00000029;
+  background: rgba($dark-grey-blue, 0.4) 0% 0% no-repeat padding-box;
+  box-shadow: inset 0px 10px 6px rgba($color-black, 0.161);
   transform: translateX(40rem);
   transition: transform 0.5s ease-in-out;
   z-index: 100;
@@ -23,18 +22,13 @@
   &.active {
     transform: translateX(0rem);
   }
-
   &__item {
     font-size: 20px;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid $color-white;
   }
   &__link {
     padding: 2.5rem 0;
     display: block;
-  }
-  &__text {
-    margin-bottom: 10rem;
-    text-align: right;
   }
 }
 

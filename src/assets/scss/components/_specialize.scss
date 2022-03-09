@@ -50,7 +50,7 @@
   &__card.active &__card--title {
     padding: 1rem 0;
     background: transparent
-      linear-gradient(90deg, #bd1ff6 0%, #4181ef 47%, #46ebed 100%) 0% 0%
+      linear-gradient(90deg, $color-primary 0%, $color-secondary 47%, $color-tertiary 100%) 0% 0%
       no-repeat padding-box;
   }
   &__card.active &__card--content {
@@ -79,9 +79,9 @@
     border-image-slice: 1;
     border-image-source: linear-gradient(
       90deg,
-      #bd1ff6 0%,
-      #4181ef 47%,
-      #46ebed 100%
+      $color-primary 0%,
+      $color-secondary 47%,
+      $color-tertiary 100%
     );
   }
   &__item.checked &__item--decoration {

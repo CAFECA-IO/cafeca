@@ -37,9 +37,6 @@ const Menu = (props) => {
           </a>
         </li>
       </div>
-      <div className="menu__text">
-        v{packageJson.version}(Alpha) CEFECA © 2022
-      </div>
     </ul>
   );
 };

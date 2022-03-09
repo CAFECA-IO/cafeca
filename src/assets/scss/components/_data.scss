@@ -1,5 +1,4 @@
 .data {
-  background-color: #283139;
   text-align: center;
   padding-bottom: 20.3rem;
   &__container {
@@ -14,8 +13,8 @@
     align-items: center;
     margin-top: 6rem;
   }
-//   &__title {
-//   }
+  //   &__title {
+  //   }
   &__image-box {
     margin-top: 4rem;
     margin-bottom: 3.3rem;
@@ -46,7 +45,7 @@
     align-items: flex-end;
     gap: 1rem;
   }
-  &__content:first-child  &__text > *:first-child,
+  &__content:first-child &__text > *:first-child,
   &__text > *:last-child {
     margin-bottom: 2rem;
   }

@@ -1,5 +1,12 @@
 .landing {
   padding-top: 10rem;
-  // height: calc(4330px - 100rem);
-  background-color: #283139;
+  background: transparent
+    linear-gradient(
+      180deg,
+      $dark-blue-grey 0%,
+      $dark-grey 17%,
+      $dark-grey-blue 82%,
+      $dark-blue-grey 100%
+    )
+    0% 0% no-repeat padding-box;
 }

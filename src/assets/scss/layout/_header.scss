@@ -6,7 +6,7 @@
   height: 10rem;
   padding: 2.7rem 4.5rem;
   background: transparent
-    linear-gradient(90deg, rgba($color-grey-1, 0.1), rgba($color-grey-2, 0.1))
+    linear-gradient(90deg, rgba($dark-grey, 0.1), rgba($dark-grey-blue, 0.1))
     0% 0% no-repeat padding-box;
   transition: all 0.5s ease-in-out;
   display: flex;
@@ -16,9 +16,9 @@
 
   &.active {
     background: transparent
-      linear-gradient(90deg, $color-grey-1, $color-grey-2 100%) 0% 0% no-repeat
+      linear-gradient(90deg, $dark-grey, $dark-grey-blue 100%) 0% 0% no-repeat
       padding-box;
-    color: $color-grey-2;
+    color: $dark-grey-blue;
   }
   &__logo {
     width: 18rem;
@@ -50,7 +50,7 @@
       // position: absolute;
       height: 3px;
       width: 100%;
-      background: #fff;
+      background: $color-white;
       border-radius: 3px;
       opacity: 1;
       left: 0;
@@ -79,24 +79,24 @@
   }
   &.active &__hambuger {
     & > span{
-      width: 2.2rem;
+      width: 3rem;
     }
     & > span:nth-child(1) {
-      -webkit-transform: rotate(39deg);
-      -moz-transform: rotate(39deg);
-      -o-transform: rotate(39deg);
-      transform: rotate(39deg);
-      // width: 2.3rem;
+      -webkit-transform: rotate(-30deg) translateY(1.5rem);
+      -moz-transform: rotate(-30deg) translateY(1.5rem);
+      -o-transform: rotate(-30deg) translateY(1.5rem);
+      transform: rotate(-30deg) translateY(1.5rem);
+
     }
     & > span:nth-child(2) {
       opacity: 0;
     }
     & > span:nth-child(3) {
-      -webkit-transform: rotate(-39deg);
-      -moz-transform: rotate(-39deg);
-      -o-transform: rotate(-39deg);
-      transform: rotate(-39deg);
-      // width: 2.3rem;
+      -webkit-transform: rotate(30deg) translateY(-1.5rem);
+      -moz-transform: rotate(30deg) translateY(-1.5rem);
+      -o-transform: rotate(30deg) translateY(-1.5rem);
+      transform: rotate(30deg) translateY(-1.5rem);
+
     }
   }
 }
