@@ -1,0 +1,19 @@
+.form {
+  max-width: 48.5rem;
+  &__input-group {
+    display: flex;
+    gap: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  &__input {
+    padding: 1.3rem 2rem;
+    border: 1px solid #46ebed;
+  }
+  &__textarea {
+    padding: 1.3rem 2rem;
+    border: 1px solid #46ebed;
+  }
+  &__button{
+      min-width: 18rem;
+  }
+}

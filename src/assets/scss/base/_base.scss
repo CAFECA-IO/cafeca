@@ -28,6 +28,35 @@ button {
   outline: inherit;
 }
 
+input,
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  border: none;
+  outline: none;
+  width: 100%;
+  background-color: rgba($color-white, 0.3);
+  -webkit-box-shadow: 0 0 0 30px rgba($color-white, 0.3) inset;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+textarea {
+  border: none;
+  overflow: auto;
+  outline: none;
+
+  -webkit-box-shadow: 0 0 0 80px rgba($color-white, 0.3) inset;
+  -moz-box-shadow: 0 0 0 80px rgba($color-white, 0.3) inset;
+  box-shadow: 0 0 0 80px rgba($color-white, 0.3) inset;
+
+  resize: none;
+  width: 100%;
+  background-color: rgba($color-white, 0.3);
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+
 html {
   // This defines what 1rem is
   font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%

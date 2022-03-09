@@ -1,6 +1,7 @@
 .button{
     display: inline-block;
     text-align: center;
+    color: $color-white;
     &--primary{
         border-radius: 4rem;
         border: 2px solid #1F8FFF;
