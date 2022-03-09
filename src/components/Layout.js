@@ -1,5 +1,6 @@
 import React, { useState, useCallback } from "react";
 import { useTranslation } from "react-i18next";
+import Footer from "./Footer";
 import Header from "./Header";
 import Menu from "./Menu";
 
@@ -34,6 +35,7 @@ const Layout = ({ children }) => {
   return (
     <div className={`layout${menuOpen ? " active" : ""}`}>
       <div className="layout__content">{children}</div>
+      <Footer/>
       <div className="layout__backdrop" onClick={closeMenuHandler}></div>
       <Menu menuOpen={menuOpen} closeMenuHandler={closeMenuHandler} />
       <Header menuOpen={menuOpen} toggleMenuHandler={toggleMenuHandler} />
