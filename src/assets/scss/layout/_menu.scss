@@ -41,5 +41,6 @@
 @include respond(phone) {
   .menu {
     width: 100vw;
+    transform: translateX(100vw);
   }
 }

@@ -1,0 +1,10 @@
+.button{
+    &--primary{
+        border-radius: 4rem;
+        border: 2px solid #1F8FFF;
+        padding: 1.4rem 4rem;
+    }
+    &--primary:hover{
+        background-color: #1F8FFF;
+    }
+}

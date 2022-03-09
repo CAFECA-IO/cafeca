@@ -1,11 +1,17 @@
 .layout {
+  background-color: $color-grey-2;
   position: relative;
-//   background: #3e4c5e;
+  // position: absolute;
+  // top: -520px;
+  // left: -840px;
+  // width: calc(100vw + 840px);
+  // height: 4330px;
+  // background: transparent url("../../images/bg.png") 0% 0% no-repeat padding-box;
+  // overflow: hidden;
 
-  &__content {
-    padding-top: 10rem;
-    height: calc(4330px - 100rem);
-  }
+  // &__content {
+    // transform: translate(840px, 520px);
+  // }
 
   &__backdrop {
     display: none;
@@ -19,5 +25,9 @@
   }
   &.active > &__backdrop {
     display: block;
+  }
+}
+@include respond(phone) {
+  .layout {
   }
 }
