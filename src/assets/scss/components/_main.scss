@@ -1,10 +1,13 @@
 .main {
   display: flex;
   gap: 8.5rem;
-  height: calc(100vh - 10rem);
+  // height: calc(100vh - 10rem);
+  height: calc(100vh + 7rem);
   width: 100vw;
   align-items: center;
   justify-content: center;
+  // background-color: rgba($color-grey-2, 0.8);
+  
   &__button {
     align-self: flex-end;
   }

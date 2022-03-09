@@ -1,4 +1,6 @@
 .button{
+    display: inline-block;
+    text-align: center;
     &--primary{
         border-radius: 4rem;
         border: 2px solid #1F8FFF;

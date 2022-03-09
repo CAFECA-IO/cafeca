@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Amaranth:wght@700&family=Dosis:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&family=Open+Sans:wght@600;700;800&display=swap");
 
-h1.header--primary {
+h1.header-primary {
   font-family: "Dosis";
   font-weight: 600;
   font-size: 4.8rem;
@@ -8,7 +8,7 @@ h1.header--primary {
   letter-spacing: 0;
   line-height: 1;
 }
-h2.header--primary {
+h2.header-primary {
   font-family: "Dosis";
   font-size: 4rem;
   color: $color-white;
@@ -21,7 +21,7 @@ h2.header--primary {
     font-weight: 500;
   }
 }
-h3.header--secondary {
+h3.header-secondary {
   font-family: "Noto Sans TC";
   font-weight: 400;
   font-size: 2rem;
@@ -29,7 +29,7 @@ h3.header--secondary {
   letter-spacing: 0;
   line-height: 1;
 }
-h4.header--primary {
+h4.header-primary {
   font-family: "Dosis";
   font-weight: 500;
   font-size: 1.8rem;
@@ -42,7 +42,7 @@ h4.header--primary {
     color: $color-grey-light-1;
   }
 }
-h4.header--secondary {
+h4.header-secondary {
   font-family: "Noto Sans TC";
   font-weight: 700;
   font-size: 1.8rem;
@@ -55,7 +55,7 @@ h4.header--secondary {
     color: $color-grey-light-1;
   }
 }
-h5.header--secondary {
+h5.header-secondary {
   font-family: "Noto Sans TC";
   font-weight: 300;
   font-size: 1.6rem;
@@ -71,17 +71,17 @@ h5.header--secondary {
     font-weight: 400;
   }
 }
-h5.header--primary {
+h5.header-primary {
   font-family: "Dosis";
   font-weight: 300;
   font-size: 1.6rem;
   letter-spacing: 0;
-  line-height: 1;
+  line-height: 1.6;
   // &--white {
   color: $color-white;
   // }
 }
-h6.header--primary {
+h6.header-primary {
   font-family: "Dosis";
   font-weight: 300;
   font-size: 1.4rem;
@@ -91,7 +91,7 @@ h6.header--primary {
   color: $color-white;
   // }
 }
-h6.header--secondary {
+h6.header-secondary {
   font-family: "Noto Sans TC";
   font-weight: 300;
   font-size: 1.4rem;
