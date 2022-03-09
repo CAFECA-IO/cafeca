@@ -21,6 +21,19 @@ h2.header-primary {
     font-weight: 500;
   }
 }
+h2.header-secondary {
+  font-family: "Noto Sans TC";
+  font-size: 4rem;
+  color: $color-white;
+  letter-spacing: 0;
+  line-height: 1;
+  &--bold {
+    font-weight: 700;
+  }
+  &--medium {
+    font-weight: 500;
+  }
+}
 h3.header-secondary {
   font-family: "Noto Sans TC";
   font-weight: 400;
@@ -67,7 +80,7 @@ h5.header-secondary {
   &--grey {
     color: $color-grey-light-1;
   }
-  &--regular{
+  &--regular {
     font-weight: 400;
   }
 }

@@ -1,0 +1,90 @@
+.specialize {
+  padding-top: 11rem;
+  text-align: center;
+  padding-bottom: 15.5rem;
+  &__content {
+    margin-top: 6rem;
+  }
+  &__container {
+    display: flex;
+    gap: 3.5rem;
+    justify-content: center;
+    align-items: center;
+  }
+  &__card {
+    text-align: left;
+    padding: 6rem 0; //3.4rem;
+    border: 0.5px solid $color-white;
+    border-radius: 25px;
+    box-shadow: 3px 3px 10px #00000078;
+    height: 48rem;
+    background: transparent
+      linear-gradient(
+        212deg,
+        #ffffff30 0%,
+        #00000000 17%,
+        #ffffff2e 27%,
+        #cecece00 34%,
+        #00000000 54%,
+        #b9b9b900 73%,
+        #ffffff38 81%,
+        #00000000 89%,
+        #7878782e 100%
+      )
+      0% 0% no-repeat padding-box;
+  }
+  &__card &__card--title {
+    text-align: center;
+  }
+  &__card &__card--content {
+    margin-top: 2.7rem;
+    padding: 0 3.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+  &__card.active {
+    height: 56rem;
+    padding: 6rem 0; //6.4rem;
+  }
+  &__card.active &__card--title {
+    padding: 1rem 0;
+    background: transparent
+      linear-gradient(90deg, #bd1ff6 0%, #4181ef 47%, #46ebed 100%) 0% 0%
+      no-repeat padding-box;
+  }
+  &__card.active &__card--content {
+    margin-top: 3.5rem;
+    padding: 0 6.4rem;
+  }
+  &__item {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+  }
+  &__item &__item--decoration {
+    width: 2.4rem;
+    height: 2.4rem;
+    border: 2px solid $color-white;
+    border-radius: 100%;
+    opacity: 0;
+  }
+  &__item &__item--decoration > div {
+    width: 2rem;
+    height: 1rem;
+    transform: rotate(-45deg) translate(3px, 2px);
+    padding: 1px;
+    border-left: 2px solid $color-white;
+    border-bottom: 2px solid $color-white;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(
+      90deg,
+      #bd1ff6 0%,
+      #4181ef 47%,
+      #46ebed 100%
+    );
+  }
+  &__item.checked &__item--decoration {
+    opacity: 1;
+  }
+}
