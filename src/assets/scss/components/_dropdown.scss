@@ -1,0 +1,49 @@
+.dropdown {
+  position: relative;
+  &__label-box {
+    width: 100%;
+    display: flex;
+    text-align: left;
+  }
+  &__label {
+    border: 1px solid $color-tertiary;
+    padding: 15px 16px;
+    flex: auto;
+  }
+  &__controller {
+    display: none;
+  }
+  &__button {
+    border: 1px solid $color-tertiary;
+    border-left: none;
+    width: 50px;
+  }
+  &__button-icon {
+    height: 2.4rem;
+    width: 2.4rem;
+    border-right: 4px solid $color-white;
+    border-bottom: 4px solid $color-white;
+    transform: rotate(45deg) translate(20px, -2px);
+  }
+  &__option {
+    text-align: left;
+    padding: 16px 34px 16px 0;
+  }
+  &__option:not(:last-child) {
+    border-bottom: 1px dotted $color-tertiary;
+  }
+  &__container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    border: 1px solid $color-tertiary;
+    border-top: none;
+    padding: 0 16px;
+    background-color: $dark-grey;
+    z-index: 10;
+    display: none;
+  }
+  &__controller:checked + &__container{
+      display: block;
+  }
+}

@@ -6,7 +6,6 @@
   width: 100vw;
   align-items: center;
   justify-content: center;
-  // background-color: rgba($color-grey-2, 0.8);
   
   &__button {
     align-self: flex-end;
@@ -108,6 +107,7 @@
   .main {
     flex-direction: column;
     padding: 0 3rem;
+   
     &__image {
       transform: translateX(-4rem);
       height: 60rem;
@@ -115,6 +115,10 @@
     &__content {
       max-width: none;
       text-align: center;
+    }
+    &__button {
+      align-self: center;
+      margin-top: 1.5rem;
     }
   }
 }

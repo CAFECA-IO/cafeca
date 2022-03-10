@@ -1,23 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Amaranth:wght@700&family=Dosis:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&family=Open+Sans:wght@600;700;800&display=swap");
 
-p.emphasize--primary{
+p.emphasize--primary {
   font-family: "Dosis";
   font-weight: 600;
   font-size: 80px;
-  color: $color-white;
 }
 h1.header-primary {
   font-family: "Dosis";
   font-weight: 600;
-  font-size: 4.8rem;
-  color: $color-white;
+  // font-size: 4.8rem;
+  font-size: 48px;
   letter-spacing: 0;
   line-height: 1;
 }
 h2.header-primary {
   font-family: "Dosis";
-  font-size: 4rem;
-  color: $color-white;
+  // font-size: 4rem;
+  font-size: 40px;
   letter-spacing: 0;
   line-height: 1;
   &--bold {
@@ -29,8 +28,8 @@ h2.header-primary {
 }
 h2.header-secondary {
   font-family: "Noto Sans TC";
-  font-size: 4rem;
-  color: $color-white;
+  // font-size: 4rem;
+  font-size: 40px;
   letter-spacing: 0;
   line-height: 1;
   &--bold {
@@ -43,20 +42,18 @@ h2.header-secondary {
 h3.header-secondary {
   font-family: "Noto Sans TC";
   font-weight: 400;
-  font-size: 2rem;
-  color: $color-white;
+  font-size: 20px;
+  // font-size: 2rem;
   letter-spacing: 0;
   line-height: 1;
 }
 h4.header-primary {
   font-family: "Dosis";
   font-weight: 500;
-  font-size: 1.8rem;
+  // font-size: 1.8rem;
+  font-size: 18px;
   letter-spacing: 0;
   line-height: 1;
-  &--white {
-    color: $color-white;
-  }
   &--grey {
     color: $color-grey-light-1;
   }
@@ -64,12 +61,10 @@ h4.header-primary {
 h4.header-secondary {
   font-family: "Noto Sans TC";
   font-weight: 700;
-  font-size: 1.8rem;
+  // font-size: 1.8rem;
+  font-size: 18px;
   letter-spacing: 0;
   line-height: 1;
-  &--white {
-    color: $color-white;
-  }
   &--grey {
     color: $color-grey-light-1;
   }
@@ -77,12 +72,10 @@ h4.header-secondary {
 h5.header-secondary {
   font-family: "Noto Sans TC";
   font-weight: 300;
-  font-size: 1.6rem;
+  // font-size: 1.6rem;
+  font-size: 16px;
   letter-spacing: 0;
   line-height: 1;
-  &--white {
-    color: $color-white;
-  }
   &--grey {
     color: $color-grey-light-1;
   }
@@ -93,30 +86,24 @@ h5.header-secondary {
 h5.header-primary {
   font-family: "Dosis";
   font-weight: 300;
-  font-size: 1.6rem;
+  // font-size: 1.6rem;
+  font-size: 16px;
   letter-spacing: 0;
   line-height: 1.6;
-  // &--white {
-  color: $color-white;
-  // }
 }
 h6.header-primary {
   font-family: "Dosis";
   font-weight: 300;
-  font-size: 1.4rem;
+  // font-size: 1.4rem;
+  font-size: 14px;
   letter-spacing: 0;
   line-height: 1;
-  // &--white {
-  color: $color-white;
-  // }
 }
 h6.header-secondary {
   font-family: "Noto Sans TC";
   font-weight: 300;
-  font-size: 1.4rem;
+  // font-size: 1.4rem;
+  font-size: 14px;
   letter-spacing: 0;
   line-height: 1;
-  // &--white {
-  color: $color-white;
-  // }
 }

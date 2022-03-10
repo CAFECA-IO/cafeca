@@ -20,13 +20,13 @@ const Specialize = (props) => {
             <ul className="specialize__card--content">
               <li className="specialize__item checked">
                 <div className="specialize__item--decoration"><div></div></div>
-                <h5 className="header-secondary header-secondary--white">
+                <h5 className="header-secondary">
                   {t("specialize_1")}
                 </h5>
               </li>
               <li className="specialize__item checked">
                 <div className="specialize__item--decoration"><div></div></div>
-                <h5 className="header-secondary header-secondary--white">
+                <h5 className="header-secondary">
                   {t("specialize_2")}
                 </h5>
               </li>
@@ -59,31 +59,31 @@ const Specialize = (props) => {
             <ul className="specialize__card--content">
               <li className="specialize__item checked">
                 <div className="specialize__item--decoration"><div></div></div>
-                <h5 className="header-secondary header-secondary--white">
+                <h5 className="header-secondary">
                   {t("specialize_1")}
                 </h5>
               </li>
               <li className="specialize__item checked">
                 <div className="specialize__item--decoration"><div></div></div>
-                <h5 className="header-secondary header-secondary--white">
+                <h5 className="header-secondary">
                   {t("specialize_2")}
                 </h5>
               </li>
               <li className="specialize__item checked">
                 <div className="specialize__item--decoration"><div></div></div>
-                <h5 className="header-secondary header-secondary--white">
+                <h5 className="header-secondary">
                   {t("specialize_3")}
                 </h5>
               </li>
               <li className="specialize__item checked">
                 <div className="specialize__item--decoration"><div></div></div>
-                <h5 className="header-secondary header-secondary--white">
+                <h5 className="header-secondary">
                   {t("specialize_4")}
                 </h5>
               </li>
               <li className="specialize__item checked">
                 <div className="specialize__item--decoration"><div></div></div>
-                <h5 className="header-secondary header-secondary--white">
+                <h5 className="header-secondary">
                   {t("specialize_5")}
                 </h5>
               </li>
@@ -122,7 +122,7 @@ const Specialize = (props) => {
               </li>
               <li className="specialize__item checked">
                 <div className="specialize__item--decoration"><div></div></div>
-                <h5 className="header-secondary header-secondary--white">
+                <h5 className="header-secondary">
                   {t("specialize_5")}
                 </h5>
               </li>

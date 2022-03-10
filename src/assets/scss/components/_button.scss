@@ -4,10 +4,10 @@
     color: $color-white;
     &--primary{
         border-radius: 4rem;
-        border: 2px solid #1F8FFF;
+        border: 2px solid $color-blue;
         padding: 1.4rem 4rem;
     }
     &--primary:hover{
-        background-color: #1F8FFF;
+        background-color: $color-blue;
     }
 }

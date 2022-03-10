@@ -38,9 +38,10 @@ input:-webkit-autofill:active {
   width: 100%;
   background-color: rgba($color-white, 0.3);
   -webkit-box-shadow: 0 0 0 30px rgba($color-white, 0.3) inset;
-  color: #fff !important;
-  -webkit-text-fill-color: #fff !important;
+  color: $color-white !important;
+  -webkit-text-fill-color: $color-white !important;
 }
+
 textarea {
   border: none;
   overflow: auto;
@@ -53,8 +54,8 @@ textarea {
   resize: none;
   width: 100%;
   background-color: rgba($color-white, 0.3);
-  color: #fff !important;
-  -webkit-text-fill-color: #fff !important;
+  color: $color-white !important;
+  -webkit-text-fill-color: $color-white !important;
 }
 
 html {
@@ -80,6 +81,7 @@ html {
 
 body {
   box-sizing: border-box;
+  color: $color-white;
 
   @include respond(tab-port) {
     padding: 0;

@@ -4,7 +4,7 @@
   right: 0;
   left: 0;
   height: 19.5rem;
-  background: #ffffff1a 0% 0% no-repeat padding-box;
+  background: rgba($color-white, 0.102) 0% 0% no-repeat padding-box;
   padding-top: 4rem;
   padding-left: 15.3rem;
   padding-right: 4.8rem;
@@ -25,5 +25,26 @@
   }
   &__copyright {
     text-align: right;
+  }
+}
+@include respond(tab-land) {
+  .footer {
+    height: 21.5rem;
+    padding-left: 4.8rem;
+    padding-right: 4.8rem;
+    padding-bottom: 2rem;
+  }
+}
+
+@include respond(tab-port) {
+  .footer {
+    height: 48.5rem;
+    &__container {
+      flex-direction: column;
+      gap: 2.8rem;
+    }
+    &__title{
+      min-width: 10rem;
+    }
   }
 }
