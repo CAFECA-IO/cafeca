@@ -11,7 +11,7 @@ const Menu = (props) => {
       onClick={props.closeMenuHandler}
     >
       <div className="menu__container">
-        <li className="menu__item">
+        {/* <li className="menu__item">
           <a className="menu__link" href="/about">
             {t("about-us")}
           </a>
@@ -30,7 +30,7 @@ const Menu = (props) => {
           <a className="menu__link" href="/contact">
             {t("contact_us")}
           </a>
-        </li>
+        </li> */}
         <li className="menu__item">
           <a className="menu__link" href="/">
             {t("back_to_home")}
