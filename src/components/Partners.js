@@ -15,14 +15,14 @@ const Slider = ({
         <button
           className="slider__btn slider__btn--left"
           onClick={clickLeftHandler}
-          disabled={currentIndex === 0}
+          disabled={childrenLength <= 3 || currentIndex === 0}
         >
           <div></div>
         </button>
         <button
           className="slider__btn slider__btn--right"
           onClick={clickRightHandler}
-          disabled={currentIndex === childrenLength - 1}
+          disabled={childrenLength <= 3 || currentIndex === childrenLength - 1}
         >
           <div></div>
         </button>
@@ -38,7 +38,7 @@ const Slider = ({
   );
 };
 
-const partners = ["Logo01@2x.png", "Logo02@2x.png", "Logo03@2x.png"];
+const partners = ["Logo01@2x.png", "Logo02@2x.png"];
 
 const Partners = (props) => {
   const { t } = useTranslation();

@@ -16,7 +16,7 @@ const Footer = (props) => {
               <h5 className="header-primary">+886 02-27001979</h5>
             </li>
             <li className="footer__info">
-              <h5 className="header-primary">luphia@mermer.cc</h5>
+              <h5 className="header-primary">contact@cafeca.io</h5>
             </li>
             <li className="footer__info">
               <h5 className="header-primary">{t("contact_info")}</h5>

@@ -38,11 +38,15 @@
     display: flex;
     align-items: center;
     width: calc(82.8rem * 5);
+    transition: all 0.8s ease-in;
   }
   &__tab {
     padding: 8px 1rem;
     padding-bottom: 14px;
     border-bottom: 3px solid transparent;
+  }
+  &__tab:hover > * {
+    transform: translateY(-6px);
   }
   &__tab.active {
     border-image-slice: 1;
@@ -52,6 +56,21 @@
       $color-secondary 47%,
       $color-tertiary 100%
     );
+  }
+  &__tab-contents.financial {
+    transform: translateX(0rem);
+  }
+  &__tab-contents.rent {
+    transform: translateX(calc(-82.8rem * 1));
+  }
+  &__tab-contents.travel {
+    transform: translateX(calc(-82.8rem * 2));
+  }
+  &__tab-contents.government {
+    transform: translateX(calc(-82.8rem * 3));
+  }
+  &__tab-contents.others {
+    transform: translateX(calc(-82.8rem * 4));
   }
   &__tabs {
     display: flex;
@@ -69,5 +88,19 @@
   &__header {
     text-align: center;
     transform: translateY(-4rem);
+  }
+  &__button {
+    max-width: 18rem;
+    align-self: center;
+    justify-self: flex-end;
+  }
+  &__tab-content:nth-child(5) > &__image {
+    flex: 2;
+  }
+  &__content-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }

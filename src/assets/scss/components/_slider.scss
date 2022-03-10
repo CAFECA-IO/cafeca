@@ -6,8 +6,9 @@
   }
   &__content {
     display: flex;
-    gap: 10rem;
+    // gap: 10rem;
     align-items: flex-start;
+    justify-content: space-around;
   }
   &__controllers {
     position: absolute;
@@ -20,6 +21,10 @@
   &__btn {
     height: 11rem;
     width: 14.2rem;
+  }
+  &__btn:disabled,
+  &__btn:disabled > div  {
+    opacity: 0;
   }
   &__btn > div {
     height: 2.4rem;
