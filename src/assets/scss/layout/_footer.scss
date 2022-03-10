@@ -27,14 +27,16 @@
     text-align: right;
   }
 }
-@include respond(phone) {
+@include respond(tab-land) {
   .footer {
+    height: 21.5rem;
     padding-left: 4.8rem;
     padding-right: 4.8rem;
+    padding-bottom: 2rem;
   }
 }
 
-@include respond(phone) {
+@include respond(tab-port) {
   .footer {
     height: 48.5rem;
     &__container {

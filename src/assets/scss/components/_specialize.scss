@@ -50,8 +50,13 @@
   &__card.active &__card--title {
     padding: 1rem 0;
     background: transparent
-      linear-gradient(90deg, $color-primary 0%, $color-secondary 47%, $color-tertiary 100%) 0% 0%
-      no-repeat padding-box;
+      linear-gradient(
+        90deg,
+        $color-primary 0%,
+        $color-secondary 47%,
+        $color-tertiary 100%
+      )
+      0% 0% no-repeat padding-box;
   }
   &__card.active &__card--content {
     margin-top: 3.5rem;
@@ -86,5 +91,31 @@
   }
   &__item.checked &__item--decoration {
     opacity: 1;
+  }
+}
+
+@include respond(tab-land) {
+  .specialize {
+    &__card &__card--content {
+      min-width: 300px;
+      padding: 0 2rem;
+    }
+    &__card.active &__card--content {
+      min-width: 336px;
+      padding: 0 3.5rem;
+    }
+  }
+}
+
+@include respond(phone) {
+  .specialize {
+    &__card &__card--content {
+      min-width: 270px;
+      padding: 0 2rem;
+    }
+    &__card.active &__card--content {
+      min-width: 300px;
+      padding: 0 2rem;
+    }
   }
 }

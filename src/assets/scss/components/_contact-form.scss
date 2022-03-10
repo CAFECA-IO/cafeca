@@ -33,7 +33,7 @@
   }
 }
 
-@include respond(phone) {
+@include respond(tab-port) {
   .contact-form {
     padding-bottom: 52.5rem;
     &__image-box {
