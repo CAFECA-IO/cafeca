@@ -33,6 +33,11 @@
     gap: 5rem;
     justify-content: space-between;
     text-align: left;
+    opacity: 0;
+    transition: all 0.8s ease-in;
+  }
+  &__tab-content.active{
+    opacity: 1;
   }
   &__tab-contents {
     display: flex;

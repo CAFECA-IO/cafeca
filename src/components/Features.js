@@ -45,7 +45,7 @@ const Features = (props) => {
       </ul>
       <div className="features__container">
         <ul className={`features__tab-contents ${feature}`}>
-          <li className="features__tab-content">
+          <li className={`features__tab-content${feature === "financial"? " active":""}`}>
             <ul className="features__content">
               <li className="features__text">
                 <div className="features__text--decoration"></div>
@@ -76,7 +76,7 @@ const Features = (props) => {
               <img src={require("../assets/images/bank@2x.png")} alt="keys" />
             </div>
           </li>
-          <li className="features__tab-content">
+          <li className={`features__tab-content${feature === "rent"? " active":""}`}>
             <ul className="features__content">
               <li className="features__text">
                 <div className="features__text--decoration"></div>
@@ -102,7 +102,7 @@ const Features = (props) => {
               />
             </div>
           </li>
-          <li className="features__tab-content">
+          <li className={`features__tab-content${feature === "travel"? " active":""}`}>
             <ul className="features__content">
               <li className="features__text">
                 <div className="features__text--decoration"></div>
@@ -128,7 +128,7 @@ const Features = (props) => {
               />
             </div>
           </li>
-          <li className="features__tab-content">
+          <li className={`features__tab-content${feature === "government"? " active":""}`}>
             <ul className="features__content">
               <li className="features__text">
                 <div className="features__text--decoration"></div>
@@ -159,7 +159,7 @@ const Features = (props) => {
               <img src={require("../assets/images/gov@2x.png")} alt="keys" />
             </div>
           </li>
-          <li className="features__tab-content">
+          <li className={`features__tab-content${feature === "others"? " active":""}`}>
             <div className="features__image">
               <img src={require("../assets/images/others@2x.png")} alt="keys" />
             </div>
