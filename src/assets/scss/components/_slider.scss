@@ -1,0 +1,41 @@
+.slider {
+  position: relative;
+  &__container {
+    max-width: 90rem;
+    margin: 0 auto;
+  }
+  &__content {
+    display: flex;
+    gap: 10rem;
+    align-items: flex-start;
+  }
+  &__controllers {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__btn {
+    height: 11rem;
+    width: 14.2rem;
+  }
+  &__btn > div {
+    height: 2.4rem;
+    width: 2.4rem;
+    border-right: 4px solid $color-white;
+    border-bottom: 4px solid $color-white;
+    // background: #3e4c5e 0% 0% no-repeat padding-box;
+    box-shadow: 3px 3px 3px #00000029;
+    border-end-start-radius: 5px;
+    border-start-end-radius: 5px;
+    border-end-end-radius: 5px;
+  }
+  &__btn--left > div {
+    transform: rotate(135deg) translate(-8.5rem, -8.5rem);
+  }
+  &__btn--right > div {
+    transform: rotate(-45deg);
+  }
+}

@@ -5,9 +5,7 @@
   right: 0;
   height: 10rem;
   padding: 2.7rem 4.5rem;
-  background: transparent
-    linear-gradient(90deg, rgba($dark-grey, 0.1), rgba($dark-grey-blue, 0.1))
-    0% 0% no-repeat padding-box;
+  background: rgba($color-white, 0.1) 0% 0% no-repeat padding-box;
   transition: all 0.5s ease-in-out;
   display: flex;
   justify-content: space-between;

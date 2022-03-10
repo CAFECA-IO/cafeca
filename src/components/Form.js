@@ -22,7 +22,7 @@ export const Form = (props) => {
             type="checkbox"
             id="tech"
           />
-          <label className="form__label" for="tech">
+          <label className="form__label" htmlFor="tech">
             <div className="form__checkbox">
               <div></div>
             </div>
@@ -35,7 +35,7 @@ export const Form = (props) => {
             type="checkbox"
             id="cooperate"
           />
-          <label className="form__label" for="cooperate">
+          <label className="form__label" htmlFor="cooperate">
             <div className="form__checkbox">
               <div></div>
             </div>
@@ -48,7 +48,7 @@ export const Form = (props) => {
             type="checkbox"
             id="price"
           />
-          <label className="form__label" for="price">
+          <label className="form__label" htmlFor="price">
             <div className="form__checkbox">
               <div></div>
             </div>
@@ -61,7 +61,7 @@ export const Form = (props) => {
             type="checkbox"
             id="other"
           />
-          <label className="form__label" for="other">
+          <label className="form__label" htmlFor="other">
             <div className="form__checkbox">
               <div></div>
             </div>
