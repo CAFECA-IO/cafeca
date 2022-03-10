@@ -14,14 +14,34 @@
   }
   &__image-box {
     flex: 1;
-    width: 38.8rem;
-    height: 27.2rem;
-    background: transparent url("../../images/CAFECA@2x.png") 0% 0% no-repeat
-      padding-box;
-    background-position: center;
-    background-size: contain;
+    // width: 38.8rem;
+    // height: 27.2rem;
+    // background: transparent url("../../images/CAFECA@2x.png") 0% 0% no-repeat
+    // padding-box;
+    // background-position: center;
+    // background-size: contain;
+  }
+  &__image {
+    width: 40rem;
+    margin: 0 auto;
+  }
+  &__image > img {
+    width: 100%;
   }
   &__form-box {
     flex: 1;
+  }
+}
+
+@include respond(phone) {
+  .contact-form {
+    padding-bottom: 52.5rem;
+    &__image-box {
+      width: 100%;
+    }
+    &__content {
+      flex-direction: column;
+      gap: 4rem;
+    }
   }
 }

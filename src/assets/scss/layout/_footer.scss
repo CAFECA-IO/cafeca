@@ -27,3 +27,22 @@
     text-align: right;
   }
 }
+@include respond(phone) {
+  .footer {
+    padding-left: 4.8rem;
+    padding-right: 4.8rem;
+  }
+}
+
+@include respond(phone) {
+  .footer {
+    height: 48.5rem;
+    &__container {
+      flex-direction: column;
+      gap: 2.8rem;
+    }
+    &__title{
+      min-width: 10rem;
+    }
+  }
+}

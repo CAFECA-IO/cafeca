@@ -8,13 +8,15 @@ p.emphasize--primary {
 h1.header-primary {
   font-family: "Dosis";
   font-weight: 600;
-  font-size: 4.8rem;
+  // font-size: 4.8rem;
+  font-size: 48px;
   letter-spacing: 0;
   line-height: 1;
 }
 h2.header-primary {
   font-family: "Dosis";
-  font-size: 4rem;
+  // font-size: 4rem;
+  font-size: 40px;
   letter-spacing: 0;
   line-height: 1;
   &--bold {
@@ -26,7 +28,8 @@ h2.header-primary {
 }
 h2.header-secondary {
   font-family: "Noto Sans TC";
-  font-size: 4rem;
+  // font-size: 4rem;
+  font-size: 40px;
   letter-spacing: 0;
   line-height: 1;
   &--bold {
@@ -39,14 +42,16 @@ h2.header-secondary {
 h3.header-secondary {
   font-family: "Noto Sans TC";
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 20px;
+  // font-size: 2rem;
   letter-spacing: 0;
   line-height: 1;
 }
 h4.header-primary {
   font-family: "Dosis";
   font-weight: 500;
-  font-size: 1.8rem;
+  // font-size: 1.8rem;
+  font-size: 18px;
   letter-spacing: 0;
   line-height: 1;
   &--grey {
@@ -56,7 +61,8 @@ h4.header-primary {
 h4.header-secondary {
   font-family: "Noto Sans TC";
   font-weight: 700;
-  font-size: 1.8rem;
+  // font-size: 1.8rem;
+  font-size: 18px;
   letter-spacing: 0;
   line-height: 1;
   &--grey {
@@ -66,7 +72,8 @@ h4.header-secondary {
 h5.header-secondary {
   font-family: "Noto Sans TC";
   font-weight: 300;
-  font-size: 1.6rem;
+  // font-size: 1.6rem;
+  font-size: 16px;
   letter-spacing: 0;
   line-height: 1;
   &--grey {
@@ -79,21 +86,24 @@ h5.header-secondary {
 h5.header-primary {
   font-family: "Dosis";
   font-weight: 300;
-  font-size: 1.6rem;
+  // font-size: 1.6rem;
+  font-size: 16px;
   letter-spacing: 0;
   line-height: 1.6;
 }
 h6.header-primary {
   font-family: "Dosis";
   font-weight: 300;
-  font-size: 1.4rem;
+  // font-size: 1.4rem;
+  font-size: 14px;
   letter-spacing: 0;
   line-height: 1;
 }
 h6.header-secondary {
   font-family: "Noto Sans TC";
   font-weight: 300;
-  font-size: 1.4rem;
+  // font-size: 1.4rem;
+  font-size: 14px;
   letter-spacing: 0;
   line-height: 1;
 }

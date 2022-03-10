@@ -50,3 +50,11 @@
     margin-bottom: 2rem;
   }
 }
+
+@include respond(phone) {
+  .data{
+    &__container {
+      flex-direction: column;
+    }
+  }
+}

@@ -94,7 +94,9 @@ const ContactForm = (props) => {
       <div className="contact-form__container">
         <div className="contact-form__content">
           <div className="contact-form__image-box">
-            {/* <img src={require("../assets/images/CAFECA.png")} alt="card" /> */}
+            <div className="contact-form__image">
+              <img src={require("../assets/images/CAFECA@2x.png")} alt="card" />
+            </div>
           </div>
           <div className="contact-form__form-box">
             <Form />

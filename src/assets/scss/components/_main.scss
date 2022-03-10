@@ -107,6 +107,7 @@
   .main {
     flex-direction: column;
     padding: 0 3rem;
+   
     &__image {
       transform: translateX(-4rem);
       height: 60rem;
@@ -114,6 +115,10 @@
     &__content {
       max-width: none;
       text-align: center;
+    }
+    &__button {
+      align-self: center;
+      margin-top: 1.5rem;
     }
   }
 }
