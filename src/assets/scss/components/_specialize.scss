@@ -4,12 +4,14 @@
   padding-bottom: 15.5rem;
   &__content {
     margin-top: 6rem;
+    position: relative;
   }
   &__container {
     display: flex;
     gap: 3.5rem;
     justify-content: center;
     align-items: center;
+    transition: all 0.5s ease-in;
   }
   &__card {
     text-align: left;
@@ -92,17 +94,71 @@
   &__item.checked &__item--decoration {
     opacity: 1;
   }
+  &__controllers {
+    display: none;
+    position: absolute;
+    justify-content: space-between;
+    bottom: -60px;
+    width: 100%;
+    padding: 0 36px;
+  }
+  &__control-btn {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+  }
+  &__icon {
+    border-bottom: 2px solid $color-white;
+  }
+  &__icon--short {
+    width: 10px;
+  }
+  &__icon--long {
+    width: 32px;
+  }
+  &__control-btn--left &__icon--short {
+    transform: rotate(-45deg) translate(1px, -2px);
+  }
+
+  &__control-btn--right &__icon--short {
+    transform: rotate(45deg) translate(14.8px, -17.5px);
+  }
+  &__control-btn:disabled,
+  &__control-btn:disabled > div {
+    opacity: 0;
+    pointer-events: none;
+  }
 }
 
 @include respond(tab-land) {
   .specialize {
     &__card &__card--content {
-      min-width: 300px;
+      width: 300px;
       padding: 0 2rem;
     }
     &__card.active &__card--content {
-      min-width: 336px;
+      width: 336px;
       padding: 0 3.5rem;
+    }
+    &__container--0 {
+      --leftDistant: calc(336px + 0rem);
+      transform: translateX(calc(var(--leftDistant) * 1));
+    }
+    &__container--1 {
+      transform: translateX(0px);
+    }
+    &__container--2 {
+      --righttDistant: calc(-336px - 0rem);
+      transform: translateX(calc(var(--righttDistant) * 1));
+    }
+  }
+}
+@include respond(tab-port) {
+  .specialize {
+    padding-top: 14rem;
+    padding-bottom: 22rem;
+    &__controllers {
+      display: flex;
     }
   }
 }
@@ -110,12 +166,23 @@
 @include respond(phone) {
   .specialize {
     &__card &__card--content {
-      min-width: 270px;
+      width: 270px;
       padding: 0 2rem;
     }
     &__card.active &__card--content {
-      min-width: 300px;
+      width: 300px;
       padding: 0 2rem;
+    }
+    &__container--0 {
+      --leftDistant: calc(300px + 0rem);
+      transform: translateX(calc(var(--leftDistant) * 1));
+    }
+    &__container--1 {
+      transform: translateX(0px);
+    }
+    &__container--2 {
+      --righttDistant: calc(-300px - 0rem);
+      transform: translateX(calc(var(--righttDistant) * 1));
     }
   }
 }

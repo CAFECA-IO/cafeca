@@ -25,8 +25,9 @@
   &__btn:disabled,
   &__btn:disabled > div  {
     opacity: 0;
+    pointer-events: none;
   }
-  &__btn > div {
+  &__btn-icon {
     height: 2.4rem;
     width: 2.4rem;
     border-right: 4px solid $color-white;

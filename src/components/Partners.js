@@ -17,14 +17,14 @@ const Slider = ({
           onClick={clickLeftHandler}
           disabled={childrenLength <= 3 || currentIndex === 0}
         >
-          <div></div>
+          <div className="slider__btn-icon"></div>
         </button>
         <button
           className="slider__btn slider__btn--right"
           onClick={clickRightHandler}
           disabled={childrenLength <= 3 || currentIndex === childrenLength - 1}
         >
-          <div></div>
+          <div className="slider__btn-icon"></div>
         </button>
       </div>
       <div
