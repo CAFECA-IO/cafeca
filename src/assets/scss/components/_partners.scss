@@ -4,6 +4,7 @@
 
   &__image-box {
     width: 25rem;
+    min-width: 25rem;
     & > img {
       width: 100%;
     }
@@ -12,3 +13,5 @@
     margin-top: 6rem;
   }
 }
+
+

@@ -50,3 +50,15 @@
     min-width: 18rem;
   }
 }
+
+@include respond(iphone) {
+  .form {
+    margin: 0 3rem;
+    &__input-group {
+      gap: 1.8rem;
+    }
+    &__label {
+      gap: 5px;
+    }
+  }
+}

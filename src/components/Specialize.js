@@ -25,10 +25,13 @@ const special = {
   },
 };
 
-const SpecializeItem = ({ title, des }) => {
+const SpecializeItem = ({ title, des, key }) => {
   const { t } = useTranslation();
   return (
-    <li className={`specialize__item${special[title][des] ? "  checked" : ""}`}>
+    <li
+      className={`specialize__item${special[title][des] ? "  checked" : ""}`}
+      key={key}
+    >
       <div className="specialize__item--decoration">
         <div></div>
       </div>
@@ -43,18 +46,21 @@ const SpecializeItem = ({ title, des }) => {
   );
 };
 
-const SpecializeCard = ({ title, index, currentIndex }) => {
+const SpecializeCard = ({ title, index, currentIndex, key }) => {
   const { t } = useTranslation();
   return (
     <div
       className={`specialize__card${currentIndex === index ? " active" : ""}`}
+      key={key}
     >
       <div className="specialize__card--title">
         <h2 className="header-secondary header-secondary--bold">{t(title)}</h2>
       </div>
       <ul className="specialize__card--content">
         {Object.keys(special[title]).map((des) => (
-          <SpecializeItem title={title} des={des} />
+          <div key={`${title}-${des}`}>
+            <SpecializeItem title={title} des={des} />
+          </div>
         ))}
       </ul>
     </div>
@@ -76,13 +82,17 @@ const Specialize = (props) => {
         {t("specialize_header")}
       </h2>
       <div className="specialize__content">
-        <div className={`specialize__container specialize__container--${currentIndex}`}>
+        <div
+          className={`specialize__container specialize__container--${currentIndex}`}
+        >
           {Object.keys(special).map((title, index) => (
-            <SpecializeCard
-              title={title}
-              index={index}
-              currentIndex={currentIndex}
-            />
+            <div key={`${title}-${index}`}>
+              <SpecializeCard
+                title={title}
+                index={index}
+                currentIndex={currentIndex}
+              />
+            </div>
           ))}
         </div>
         <div className="specialize__controllers">

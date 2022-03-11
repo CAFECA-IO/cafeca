@@ -37,6 +37,11 @@ ORDER: Base + typography > general layout + grid > page layout > components
       @content;
     } //414px
   }
+  @if $breakpoint == lg-phone {
+    @media only screen and (max-width: 600px) {
+      @content;
+    } //600px
+  }
   @if $breakpoint == phone {
     @media only screen and (max-width: 740px) {
       @content;

@@ -24,6 +24,7 @@ const Dropdown = ({ feature, setFeature, features }) => {
         type="checkbox"
         id="feature-dropdown"
         checked={open}
+        readOnly
       />
       <div className="dropdown__container">
         {features
