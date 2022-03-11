@@ -110,9 +110,14 @@
   }
 }
 
+@include respond(tab-port){
+  .features{
+    margin: 14rem 4.8rem 0;
+  }
+}
+
 @include respond(phone) {
   .features {
-    margin: 0 4.8rem;
     &__image {
       max-width: 40rem;
     }
@@ -153,6 +158,6 @@
 
 @include respond(iphone) {
   .features {
-    margin: 0 4.8rem;
+    // margin: 6rem 4.8rem 0;
   }
 }

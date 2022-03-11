@@ -6,16 +6,16 @@
   }
   &__content {
     display: flex;
-    // gap: 10rem;
     align-items: flex-start;
     justify-content: space-around;
+    transition: all 0.5s ease-in;
   }
   &__controllers {
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    display: flex;
     justify-content: space-between;
   }
   &__btn {
@@ -23,10 +23,11 @@
     width: 14.2rem;
   }
   &__btn:disabled,
-  &__btn:disabled > div  {
+  &__btn:disabled > div {
     opacity: 0;
+    pointer-events: none;
   }
-  &__btn > div {
+  &__btn-icon {
     height: 2.4rem;
     width: 2.4rem;
     border-right: 4px solid $color-white;
@@ -42,5 +43,43 @@
   }
   &__btn--right > div {
     transform: rotate(-45deg);
+  }
+}
+
+@include respond(phone) {
+  .slider {
+    &__controllers {
+      display: flex;
+    }
+    &__content {
+      gap: 10rem;
+      // transform: translateX(35rem);
+    }
+    &__container {
+      max-width: 30rem;
+      overflow: hidden;
+    }
+  }
+}
+
+@include respond(lg-phone) {
+  .slider {
+    &__btn {
+      width: 7rem;
+    }
+    &__btn--left > div {
+      transform: rotate(135deg) translate(-3.4rem, -3.4rem);
+    }
+  }
+}
+
+@include respond(iphone) {
+  .slider {
+    &__btn {
+      width: 6rem;
+    }
+    &__btn--left > div {
+      transform: rotate(135deg) translate(-2.8rem, -2.8rem);
+    }
   }
 }

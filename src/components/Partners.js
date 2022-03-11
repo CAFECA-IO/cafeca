@@ -15,16 +15,16 @@ const Slider = ({
         <button
           className="slider__btn slider__btn--left"
           onClick={clickLeftHandler}
-          disabled={childrenLength <= 3 || currentIndex === 0}
+          disabled={childrenLength < 3 || currentIndex === 0}
         >
-          <div></div>
+          <div className="slider__btn-icon"></div>
         </button>
         <button
           className="slider__btn slider__btn--right"
           onClick={clickRightHandler}
-          disabled={childrenLength <= 3 || currentIndex === childrenLength - 1}
+          disabled={childrenLength < 3 || currentIndex === childrenLength - 1}
         >
-          <div></div>
+          <div className="slider__btn-icon"></div>
         </button>
       </div>
       <div
@@ -38,19 +38,34 @@ const Slider = ({
   );
 };
 
-const partners = ["Logo01@2x.png", "Logo02@2x.png"];
+const partners = ["Logo01@2x.png", "Logo02@2x.png", "Logo03@2x.png"];
 
 const Partners = (props) => {
   const { t } = useTranslation();
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [centerIndex, setCenterIndex] = useState(0);
+  const sliderContent = window.document.querySelector(
+    `.partners .slider .slider__content`
+  );
   const clickRightHandler = () => {
-    setCurrentIndex((prev) => prev + 1);
+    setCurrentIndex((prev) => {
+      sliderContent.style.transform = `translateX(${
+        -35 * (prev + 1 - centerIndex)
+      }rem)`;
+      return prev + 1;
+    });
   };
   const clickLeftHandler = () => {
-    setCurrentIndex((prev) => prev - 1);
+    setCurrentIndex((prev) => {
+      sliderContent.style.transform = `translateX(${
+        -35 * (prev - 1 - centerIndex)
+      }rem)`;
+      return prev - 1;
+    });
   };
   useEffect(() => {
     if (partners) {
+      setCenterIndex(Math.floor(partners?.length / 2));
       setCurrentIndex(Math.floor(partners?.length / 2));
     }
   }, []);
