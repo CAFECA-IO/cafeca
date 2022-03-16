@@ -49,7 +49,7 @@
     height: 56rem;
     padding: 6rem 0; //6.4rem;
   }
-  &__card.active &__card--title {
+  &__card--title.emphasize {
     padding: 1rem 0;
     background: transparent
       linear-gradient(

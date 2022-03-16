@@ -1,9 +1,8 @@
 .main {
   display: flex;
-  gap: 8.5rem;
-  // height: calc(100vh - 10rem);
-  height: calc(100vh + 7rem);
-  width: 100vw;
+  gap: 6rem;
+  height: calc(80rem + 7rem);
+  margin: 0 auto;
   align-items: center;
   justify-content: center;
   
@@ -11,7 +10,7 @@
     align-self: flex-end;
   }
   &__content {
-    max-width: 45.3rem;
+    max-width: 40rem;
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -20,7 +19,7 @@
     position: relative;
     height: 100%;
     width: 60rem;
-    transform: translateX(-4rem);
+    transform: translateX(-6rem);
     &--box {
       &:nth-child(1) {
         top: -10rem;
@@ -171,6 +170,60 @@
           left: calc(25.8rem * 0.8);
           width: calc(19.1rem * 0.8);
           height: calc(29.5rem * 0.8);
+        }
+      }
+    }
+  }
+}
+@include respond(iphoneSE) {
+  .main {
+    &__image {
+      position: relative;
+      height: calc(60rem * 0.7);
+      width: 100vw;
+      transform: translateX(-1rem);
+      &--box {
+        &:nth-child(1) {
+          top: (-10rem * 0.7);
+          left: calc(1.1rem * 0.7);
+          width: calc(65.5rem * 0.7);
+          height: calc(60.3rem * 0.7);
+        }
+        &:nth-child(2) {
+          top: calc(16rem * 0.7);
+          left: calc(10rem * 0.7);
+          width: calc(12.5rem * 0.7);
+          height: calc(13.5rem * 0.7);
+        }
+        &:nth-child(3) {
+          top: calc(10rem * 0.7);
+          left: calc(20rem * 0.7);
+          width: calc(12.5rem * 0.7);
+          height: calc(14rem * 0.7);
+        }
+        &:nth-child(4) {
+          top: calc(10rem * 0.7);
+          left: calc(35rem * 0.7);
+          width: calc(12.5rem * 0.7);
+          height: calc(13.5rem * 0.7);
+        }
+        &:nth-child(5) {
+          top: calc(16rem * 0.7);
+          left: calc(46rem * 0.7);
+          width: calc(12.5rem * 0.7);
+          height: calc(14.5rem * 0.7);
+        }
+        &:nth-child(6) {
+          top: calc(32.5rem * 0.7);
+          left: calc(11.5rem * 0.7);
+          width: calc(48.5rem * 0.7);
+          height: calc(28rem * 0.7);
+        }
+        &:nth-child(7) {
+          top: calc(22rem * 0.7);
+          left: calc(25.8rem * 0.7);
+          width: calc(19.1rem * 0.7);
+          height: calc(29.5rem * 0.7);
         }
       }
     }
