@@ -106,7 +106,8 @@
   .main {
     flex-direction: column;
     padding: 0 3rem;
-   
+    height: auto;
+    min-height: calc(80rem + 7rem);
     &__image {
       transform: translateX(-4rem);
       height: 60rem;
