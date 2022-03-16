@@ -106,10 +106,10 @@ const Features = (props) => {
                 ))}
               </ul>
               <div className="features__image">
-                <img
+                {/* <img
                   src={require("../assets/images/" + contents[key].img)}
                   alt="keys"
-                />
+                /> */}
               </div>
             </li>
           ))}
@@ -119,7 +119,7 @@ const Features = (props) => {
             }`}
           >
             <div className="features__image">
-              <img src={require("../assets/images/others@2x.png")} alt="keys" />
+              {/* <img src={require("../assets/images/others@2x.png")} alt="keys" /> */}
             </div>
             <div className="features__content-container">
               <ul className="features__content">
