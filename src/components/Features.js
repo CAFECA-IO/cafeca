@@ -106,10 +106,10 @@ const Features = (props) => {
                 ))}
               </ul>
               <div className="features__image">
-                <img
+                {/* <img
                   src={require("../assets/images/" + contents[key].img)}
                   alt="keys"
-                />
+                /> */}
               </div>
             </li>
           ))}
