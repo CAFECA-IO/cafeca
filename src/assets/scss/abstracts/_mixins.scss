@@ -32,8 +32,8 @@ ORDER: Base + typography > general layout + grid > page layout > components
 1em = 16px
 */
 @mixin respond($breakpoint) {
-  @if $breakpoint == iphoneSE {
-    @media only screen and (max-width: 375px) {
+  @if $breakpoint == iphone12 {
+    @media only screen and (max-width: 390px) {
       @content;
     } //414px
   }

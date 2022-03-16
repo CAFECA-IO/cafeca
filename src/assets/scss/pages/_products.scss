@@ -54,15 +54,119 @@
     background-position: center;
     background-size: contain;
   }
+  &__finger,
+  &__offline,
+  &__device {
+    display: flex;
+    align-items: center;
+    & > * {
+      flex: 1;
+    }
+  }
+  &__offline{
+      flex-direction: row-reverse;
+  }
+  &__finger-image {
+    position: relative;
+    width: 48rem;
+    height: 40rem;
+    &--background {
+      @include absCenter;
+      width: 60rem;
+      background: transparent url("../../images/product_pic@2x.png") 0% 0%
+        no-repeat padding-box;
+      background-position: center;
+      background-size: contain;
+    }
+    &--card {
+      @include absCenter;
+      top: 40%;
+      width: 30rem;
+      background: transparent url("../../images/CAFECA_4@2x.png") 0% 0%
+        no-repeat padding-box;
+      background-position: center;
+      background-size: contain;
+    }
+    &--fingerprint {
+      @include absCenter;
+      top: 40%;
+      width: 30rem;
+      background: transparent url("../../images/CAFECA_4@2x.png") 0% 0%
+        no-repeat padding-box;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+  &__offline-image {
+    position: relative;
+    width: 48rem;
+    height: 40rem;
+    &--cloud {
+      @include absCenter;
+      width: 60rem;
+      background: transparent url("../../images/product_pic@2x.png") 0% 0%
+        no-repeat padding-box;
+      background-position: center;
+      background-size: contain;
+    }
+    &--card {
+      @include absCenter;
+      top: 40%;
+      width: 30rem;
+      background: transparent url("../../images/CAFECA_4@2x.png") 0% 0%
+        no-repeat padding-box;
+      background-position: center;
+      background-size: contain;
+    }
+    &--plus {
+      @include absCenter;
+      top: 40%;
+      width: 30rem;
+      background: transparent url("../../images/CAFECA_4@2x.png") 0% 0%
+        no-repeat padding-box;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+  &__device-image {
+    position: relative;
+    width: 48rem;
+    height: 40rem;
+    &--devices {
+      @include absCenter;
+      width: 60rem;
+      background: transparent url("../../images/product_pic@2x.png") 0% 0%
+        no-repeat padding-box;
+      background-position: center;
+      background-size: contain;
+    }
+    &--card {
+      @include absCenter;
+      top: 40%;
+      width: 30rem;
+      background: transparent url("../../images/CAFECA_4@2x.png") 0% 0%
+        no-repeat padding-box;
+      background-position: center;
+      background-size: contain;
+    }
+    &--light {
+      @include absCenter;
+      top: 40%;
+      width: 30rem;
+      background: transparent url("../../images/CAFECA_4@2x.png") 0% 0%
+        no-repeat padding-box;
+      background-position: center;
+      background-size: contain;
+    }
+  }
 }
 
 @include respond(tab-port) {
-    .products {
-      height: fit-content;
-      padding-bottom: 60rem;
-      &__container {
-        margin: 0 4.8rem;
-      }
+  .products {
+    height: fit-content;
+    padding-bottom: 60rem;
+    &__container {
+      margin: 0 4.8rem;
     }
   }
-  
+}

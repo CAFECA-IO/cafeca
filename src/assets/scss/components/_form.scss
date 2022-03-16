@@ -62,3 +62,11 @@
     }
   }
 }
+
+@include respond(iphone12) {
+  .form {
+    &__input-group {
+      gap: 1rem;
+    }
+  }
+}

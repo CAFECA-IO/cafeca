@@ -176,7 +176,7 @@
     }
   }
 }
-@include respond(iphoneSE) {
+@include respond(iphone12) {
   .main {
     &__image {
       position: relative;

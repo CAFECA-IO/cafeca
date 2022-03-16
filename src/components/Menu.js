@@ -16,11 +16,11 @@ const Menu = (props) => {
             {t("about_us")}
           </a>
         </li>
-        <li className="menu__item">
+        {/* <li className="menu__item">
           <a className="menu__link" href="/products">
             {t("products_introduction")}
           </a>
-        </li>
+        </li> */}
         <li className="menu__item">
           <a className="menu__link" href="/">
             {t("back_to_home")}
