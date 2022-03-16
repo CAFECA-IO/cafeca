@@ -42,7 +42,7 @@ const Footer = (props) => {
           </div>
           <ul className="footer__infos">
             <li className="footer__info">
-              <h5 className="header-primary">{t("about-us")}</h5>
+              <h5 className="header-primary">{t("about_us")}</h5>
             </li>
             <li className="footer__info">
               <h5 className="header-primary">{t("our_team")}</h5>

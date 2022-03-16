@@ -13,7 +13,7 @@ const Menu = (props) => {
       <div className="menu__container">
         {/* <li className="menu__item">
           <a className="menu__link" href="/about">
-            {t("about-us")}
+            {t("about_us")}
           </a>
         </li>
         <li className="menu__item">

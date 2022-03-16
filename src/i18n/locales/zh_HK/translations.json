@@ -1,5 +1,5 @@
 {
-  "about-us": "關於我們",
+  "about_us": "關於我們",
   "products_introduction": "產品介紹",
   "our_team": "團隊陣容",
   "contact_us": "聯絡我們",
@@ -66,5 +66,25 @@
   "service": "SERVICE",
   "product_info": "產品資訊",
   "become_partner": "成為合作夥伴",
-  "contact_info": "{{phone}} {{email}} 台北市松山區民生東路三段 156 號 9 樓"
+  "contact_info": "{{phone}} {{email}} 台北市松山區民生東路三段 156 號 9 樓",
+  "about_us_en": "ABOUT US",
+  "about_us_introducion": "墨沫是一個年輕有活力的新創團隊，專注於區塊鏈技術研發，並致力將科技融入生活。",
+  "about_us_services": "主要商品 / 服務項目",
+  "about_us_service_1": "TideBit 於 2017 年上線於香港，是面對全世界用戶的加密貨幣交易所。具備香港金融 1 號牌照，支援港幣出入金。",
+  "about_us_service_2": "是區塊鏈側鏈解決方案，提供應用服務商快速導入區塊鏈解決方案，如遊戲的 NFT 發行、ERC20 導入交易系統等。",
+  "about_us_service_3": "TideBit Swap 是去中心式加密貨幣交易所，提供用戶便利地進行加密貨幣兌換。",
+  "product_introducion": "一張結合區塊鏈與生物辨識技術多功能冷錢包，取代傳統密碼作為金鑰之開關。不僅限於虛擬貨幣的存放，不論在安全性、方便性上皆符合未來網路時代之解決方案，能帶你成為領先業界並跟上趨勢的一張卡片。",
+  "product_title_1": "指紋辨識功能",
+  "product_description_1-1": "配有 AEIGS TECH 高性能內置指紋傳感器，將私鑰保存在卡片中，所有操作均是透過指紋解鎖錢包以使用私鑰，私鑰完全對外隔離，增加安全性，不必擔心個資遭竊取。",
+  "product_description_1-2": "透過我們的專利技術，可通過分配的指紋匹配來支持多個錢包，獨立模式增加了指紋驗證和快速交易簽名的便利，亦可通過分配的指紋來決定你所使用的身分，例如自然人與法人，來達到管理多個不同身分。",
+  "product_title_2": "離線錢包",
+  "product_description_2-1": "不同於以往的冷錢包，須連網交易，CAFECA 屬於完全的離線錢包，大幅提升交易安全性，並且搭配內置的低耗功能電子指面板，可全面查看完整交易明細及帳戶。",
+  "product_description_2-2": "突破以往總是擔心個資被掌握，或是卡片被盜的風險，使用 CAFECA 可以再無需接露你的個人資訊情況下證明你是該帳號的合法使用者，並且使用加密通道溝通永遠只接露公鑰，私鑰完全對外隔離，無盜刷風險。",
+  "product_title_3": "支援各種裝置和貨幣",
+  "product_description_3-1": "考量大量不同的使用者， CAFECA 同時適用於 Windows、Mac、IOS 和 Android 的 BLE/USB 模式搭配 APP 使用。",
+  "product_description_3-2": "並且支援 Bitcoin、Bitcoin cash、Ethereum、Litecoin 和 Ripple 等多種幣種。",
+  "product_title_4": "不怕卡片遺失",
+  "product_description_4-1": "CAFECA 使用我們的另一項專利技術，支援 RSA/ECC 金鑰運行，完善的備份卡片回復機制，在你初始化錢包的同時，我們將您的私鑰，連同您的個人指紋資訊，一同加密後碎片化上傳至區塊鏈網路，當你遺失卡片，需要找回錢包的時候，只需要再購入一張 CAFECA ，加上你的指紋，即可恢復。",
+  "product_description_4-2": "",
+  "back": "BACK"
 }
