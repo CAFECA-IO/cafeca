@@ -54,7 +54,7 @@ const Footer = (props) => {
         </div>
       </div>
       <div className="footer__copyright">
-      <p className="header-secondary">@ CAFECA 2022</p>
+      <p className="header-primary">@ CAFECA 2022</p>
       </div>
     </footer>
   );
