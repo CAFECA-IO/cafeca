@@ -15,58 +15,63 @@ export const Form = (props) => {
       <div className="form__input-group">
         <input className="form__input" type="number" placeholder={t("phone")} />
       </div>
-      <div className="form__input-group form__checkboxs">
-        <div className="form__checkbox-group">
-          <input
-            className="form__checkbox-controller"
-            type="checkbox"
-            id="tech"
-          />
-          <label className="form__label" htmlFor="tech">
-            <div className="form__checkbox">
-              <div></div>
-            </div>
-            <h5 className="header-secondary">{t("tech_question")}</h5>
-          </label>
+
+      <div className="form__checkboxs">
+        <div className="form__checkboxs-group">
+          <div className="form__checkbox-group">
+            <input
+              className="form__checkbox-controller"
+              type="checkbox"
+              id="tech"
+            />
+            <label className="form__label" htmlFor="tech">
+              <div className="form__checkbox">
+                <div></div>
+              </div>
+              <h5 className="header-secondary">{t("tech_question")}</h5>
+            </label>
+          </div>
+          <div className="form__checkbox-group">
+            <input
+              className="form__checkbox-controller"
+              type="checkbox"
+              id="cooperate"
+            />
+            <label className="form__label" htmlFor="cooperate">
+              <div className="form__checkbox">
+                <div></div>
+              </div>
+              <h5 className="header-secondary">{t("cooperate_question")}</h5>
+            </label>
+          </div>
         </div>
-        <div className="form__checkbox-group">
-          <input
-            className="form__checkbox-controller"
-            type="checkbox"
-            id="cooperate"
-          />
-          <label className="form__label" htmlFor="cooperate">
-            <div className="form__checkbox">
-              <div></div>
-            </div>
-            <h5 className="header-secondary">{t("cooperate_question")}</h5>
-          </label>
-        </div>
-        <div className="form__checkbox-group">
-          <input
-            className="form__checkbox-controller"
-            type="checkbox"
-            id="price"
-          />
-          <label className="form__label" htmlFor="price">
-            <div className="form__checkbox">
-              <div></div>
-            </div>
-            <h5 className="header-secondary">{t("price_question")}</h5>
-          </label>
-        </div>
-        <div className="form__checkbox-group">
-          <input
-            className="form__checkbox-controller"
-            type="checkbox"
-            id="other"
-          />
-          <label className="form__label" htmlFor="other">
-            <div className="form__checkbox">
-              <div></div>
-            </div>
-            <h5 className="header-secondary">{t("others_question")}</h5>
-          </label>
+        <div className="form__checkboxs-group">
+          <div className="form__checkbox-group">
+            <input
+              className="form__checkbox-controller"
+              type="checkbox"
+              id="price"
+            />
+            <label className="form__label" htmlFor="price">
+              <div className="form__checkbox">
+                <div></div>
+              </div>
+              <h5 className="header-secondary">{t("price_question")}</h5>
+            </label>
+          </div>
+          <div className="form__checkbox-group">
+            <input
+              className="form__checkbox-controller"
+              type="checkbox"
+              id="other"
+            />
+            <label className="form__label" htmlFor="other">
+              <div className="form__checkbox">
+                <div></div>
+              </div>
+              <h5 className="header-secondary">{t("others_question")}</h5>
+            </label>
+          </div>
         </div>
       </div>
       <div className="form__input-group">
@@ -88,6 +93,10 @@ const ContactForm = (props) => {
 
   return (
     <div className="contact-form">
+      <div className="contact-form__background contact-form__background--1"></div>
+      <div className="contact-form__background contact-form__background--2"></div>
+      <div className="contact-form__background contact-form__background--3"></div>
+      <div className="contact-form__bg-img layout__bg-img--star"></div>
       <h2 className="contact-form__header header-primary header-primary--medium">
         {t("contact_us_en")}
       </h2>

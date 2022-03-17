@@ -56,7 +56,7 @@ const SpecializeCard = ({ title, index, currentIndex, key }) => {
       <div
         className={`specialize__card--title${index === 1 ? " emphasize" : ""}`}
       >
-        <h2 className="header-secondary header-secondary--bold">{t(title)}</h2>
+        <h2 className="header-primary header-primary--bold">{t(title)}</h2>
       </div>
       <ul className="specialize__card--content">
         {Object.keys(special[title]).map((des) => (

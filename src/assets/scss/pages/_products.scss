@@ -1,18 +1,21 @@
 .products {
   min-height: 100vh;
-  padding-top: 10rem;
-  background: transparent
-    linear-gradient(
-      180deg,
-      $dark-blue-grey 0%,
-      $dark-grey 17%,
-      $dark-grey-blue 82%,
-      $dark-blue-grey 100%
-    )
-    0% 0% no-repeat padding-box;
+  padding-bottom: 30rem;
+
+  // padding-top: 10rem;
+  // background: transparent
+  //   linear-gradient(
+  //     180deg,
+  //     $dark-blue-grey 0%,
+  //     $dark-grey 17%,
+  //     $dark-grey-blue 82%,
+  //     $dark-blue-grey 100%
+  //   )
+  //   0% 0% no-repeat padding-box;
   &__container {
     max-width: 94rem;
     margin: 0 auto;
+    z-index: 2;
   }
   &__intro {
     text-align: center;
@@ -22,6 +25,7 @@
   &__intro-image {
     position: relative;
     height: 40rem;
+    z-index: 100 ;
     &--circle {
       @include absCenter;
       width: 60rem;
@@ -122,8 +126,9 @@
       left: 54%;
       background: transparent url("../../images/cloud@2x.png") 0% 0% no-repeat
         padding-box;
-      //   background-color: #38414d;
-      //   background-blend-mode: color-dodge;
+      // background: url("../../images/cloud@2x.png"),
+      //   linear-gradient(180deg, #373f49, #38414d);
+      background-blend-mode: color-dodge;
       background-position: center;
       background-size: contain;
     }
@@ -179,10 +184,13 @@
   &__trace-image {
     &--spotlight {
       @include absCenter;
+      // background: url("../../images/spotlight_2@2x.png"),
+      //   linear-gradient(180deg, #3c495a 82%, #3a495b);
       background: transparent url("../../images/spotlight_2@2x.png") 0% 0%
         no-repeat padding-box;
       background-position: center;
       background-size: contain;
+      background-blend-mode: color-dodge;
     }
     &--card {
       @include absCenter;
@@ -232,6 +240,7 @@
     display: flex;
     gap: 5rem;
     justify-content: center;
+    margin-top: 6rem;
   }
   &__button {
     min-width: 18rem;
@@ -265,6 +274,16 @@
     &__content {
       flex: 1;
     }
+    &__intro-image {
+      --ratio: calc(100vw / 1280px);
+      &--circle {
+        width: calc(60rem * 0.8);
+      }
+      &--card {
+        width: calc(30rem * 0.8);
+      }
+      // transform: translate(-50%, -50%) scale(var(--ratio));
+    }
   }
 }
 @include respond(iphone) {
@@ -272,14 +291,17 @@
     &__buttons {
       gap: 2rem;
     }
-  }
-}
-
-@include respond(iphone12) {
-  .products {
-    &__buttons {
-      margin-top: 6rem;
-      flex-direction: column;
+    &__button {
+      min-width: 12rem;
     }
   }
 }
+
+// @include respond(iphone12) {
+//   .products {
+//     &__buttons {
+//       margin-top: 6rem;
+//       flex-direction: column;
+//     }
+//   }
+// }

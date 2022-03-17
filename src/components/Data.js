@@ -5,8 +5,8 @@ const Data = (props) => {
   const { t } = useTranslation();
   return (
     <div className="data">
-      <h2 className="specialize__header header-primary header-primary--medium">
-        {t("specialize_header")}
+      <h2 className="data__header header-primary header-primary--medium">
+        {t("data_header")}
       </h2>
       <div className="data__container">
         <div className="data__content">

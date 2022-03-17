@@ -34,8 +34,13 @@ const Layout = ({ children }) => {
 
   return (
     <div className={`layout${menuOpen ? " active" : ""}`}>
+      <div className="layout__background layout__background--1"></div>
+      <div className="layout__background layout__background--2"></div>
+      <div className="layout__background layout__background--3"></div>
+      <div className="layout__bg-img layout__bg-img--star"></div>
+      <div className="layout__bg-img layout__bg-img--earth"></div>
       <div className="layout__content">{children}</div>
-      <Footer/>
+      <Footer />
       <div className="layout__backdrop" onClick={closeMenuHandler}></div>
       <Menu menuOpen={menuOpen} closeMenuHandler={closeMenuHandler} />
       <Header menuOpen={menuOpen} toggleMenuHandler={toggleMenuHandler} />

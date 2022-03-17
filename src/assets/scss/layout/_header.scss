@@ -9,7 +9,7 @@
   transition: all 0.5s ease-in-out;
   display: flex;
   justify-content: space-between;
-  z-index: 1000;
+  z-index: 10000;
   align-items: center;
 
   &.active {
@@ -40,7 +40,6 @@
     -o-transition: 0.5s ease-in-out;
     transition: 0.5s ease-in-out;
     cursor: pointer;
-    z-index: 1000;
     align-self: center;
 
     & > span {
