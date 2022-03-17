@@ -12,13 +12,13 @@ const About = (props) => {
           <h2 className="about__header header-primary header-primary--medium">
             {t("about_us_en")}
           </h2>
-          <h5 className="header-secondary about__text">
+          <p className="header-secondary about__text">
             {t("about_us_introducion")}
-          </h5>
+          </p>
           <ul className="about__services">
-            <h5 className="about__services-title header-secondary">
+            <p className="about__services-title header-secondary">
               {t("about_us_services")}
-            </h5>
+            </p>
             <li className="about__service">
               <a
                 className="about__link"
@@ -26,11 +26,11 @@ const About = (props) => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <h5 className="header-secondary"> https://tidebit.com</h5>
+                <p className="header-secondary"> https://tidebit.com</p>
               </a>
-              <h5 className="header-secondary about__text">
+              <p className="header-secondary about__text">
                 {t("about_us_service_1")}
-              </h5>
+              </p>
             </li>
             <li className="about__service">
               <a
@@ -39,11 +39,11 @@ const About = (props) => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <h5 className="header-secondary"> https://boltchain.io</h5>
+                <p className="header-secondary"> https://boltchain.io</p>
               </a>
-              <h5 className="header-secondary about__text">
+              <p className="header-secondary about__text">
                 {t("about_us_service_2")}
-              </h5>
+              </p>
             </li>
             <li className="about__service">
               <a
@@ -52,13 +52,13 @@ const About = (props) => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <h5 className="header-secondary">
+                <p className="header-secondary">
                   https://swap.tidebit.network
-                </h5>
+                </p>
               </a>
-              <h5 className="header-secondary about__text">
+              <p className="header-secondary about__text">
                 {t("about_us_service_3")}
-              </h5>
+              </p>
             </li>
           </ul>
           <a className="about__button button button--primary" href="/">

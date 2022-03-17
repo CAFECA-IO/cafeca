@@ -1,5 +1,6 @@
 .form {
   max-width: 48.5rem;
+  margin: 0 auto;
   &__input-group {
     display: flex;
     gap: 2.5rem;
@@ -10,13 +11,24 @@
     border: 1px solid $color-tertiary;
     font-family: "Noto Sans TC";
     font-weight: 300;
-    font-size: 1.6rem;
+    font-size: 16px;
   }
   &__checkboxs {
+    display: flex;
+    flex: auto;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 2rem;
+  }
+  &__checkboxs-group {
+    display: flex;
+    flex: auto;
+    align-items: center;
     justify-content: space-between;
   }
   &__checkbox-controller {
     display: none;
+    justify-content: space-between;
   }
   &__checkbox {
     width: 2rem;
@@ -44,18 +56,30 @@
     border: 1px solid $color-tertiary;
     font-family: "Noto Sans TC";
     font-weight: 300;
-    font-size: 1.6rem;
+    font-size: 16px;
   }
   &__button {
     min-width: 18rem;
+    margin-top: 2rem;
   }
 }
 
 @include respond(iphone) {
   .form {
-    margin: 0 3rem;
+    width: 100%;
+    max-width: none;
     &__input-group {
-      gap: 1.8rem;
+      // gap: 1.8rem;
+      flex-direction: column;
+      margin-bottom: 2.5rem;
+    }
+    &__checkboxs {
+      flex-direction: column;
+      gap: 2.5rem;
+      align-items: flex-start;
+    }
+    &__checkboxs-group {
+      gap: 6rem;
     }
     &__label {
       gap: 5px;

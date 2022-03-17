@@ -1,18 +1,21 @@
 .products {
   min-height: 100vh;
-  padding-top: 10rem;
-  background: transparent
-    linear-gradient(
-      180deg,
-      $dark-blue-grey 0%,
-      $dark-grey 17%,
-      $dark-grey-blue 82%,
-      $dark-blue-grey 100%
-    )
-    0% 0% no-repeat padding-box;
+  padding-bottom: 30rem;
+
+  // padding-top: 10rem;
+  // background: transparent
+  //   linear-gradient(
+  //     180deg,
+  //     $dark-blue-grey 0%,
+  //     $dark-grey 17%,
+  //     $dark-grey-blue 82%,
+  //     $dark-blue-grey 100%
+  //   )
+  //   0% 0% no-repeat padding-box;
   &__container {
     max-width: 94rem;
     margin: 0 auto;
+    z-index: 2;
   }
   &__intro {
     text-align: center;
@@ -22,6 +25,7 @@
   &__intro-image {
     position: relative;
     height: 40rem;
+    z-index: 100 ;
     &--circle {
       @include absCenter;
       width: 60rem;
@@ -54,110 +58,195 @@
     background-position: center;
     background-size: contain;
   }
+  &__header {
+    margin-bottom: 2rem;
+  }
+  &__description {
+    margin-bottom: 4rem;
+  }
   &__finger,
   &__offline,
-  &__device {
+  &__device,
+  &__trace {
     display: flex;
     align-items: center;
-    & > * {
-      flex: 1;
-    }
+    gap: 4rem;
   }
-  &__offline{
-      flex-direction: row-reverse;
-  }
-  &__finger-image {
+  &__image-box {
     position: relative;
     width: 48rem;
     height: 40rem;
+    flex: 1;
+  }
+  &__content {
+    flex: 1;
+  }
+  &__image {
+    width: 100%;
+    height: 40rem;
+  }
+  &__offline,
+  &__trace {
+    flex-direction: row-reverse;
+  }
+  &__finger-image {
     &--background {
       @include absCenter;
-      width: 60rem;
-      background: transparent url("../../images/product_pic@2x.png") 0% 0%
+      background: transparent url("../../images/fingerprint_2@2x.png") 0% 0%
         no-repeat padding-box;
       background-position: center;
       background-size: contain;
     }
     &--card {
       @include absCenter;
-      top: 40%;
-      width: 30rem;
-      background: transparent url("../../images/CAFECA_4@2x.png") 0% 0%
+      top: 53%;
+      left: 49%;
+      width: 40rem;
+      background: transparent url("../../images/CAFECA_2@2x.png") 0% 0%
         no-repeat padding-box;
       background-position: center;
       background-size: contain;
     }
     &--fingerprint {
       @include absCenter;
-      top: 40%;
-      width: 30rem;
-      background: transparent url("../../images/CAFECA_4@2x.png") 0% 0%
-        no-repeat padding-box;
+      top: 49%;
+      left: 48%;
+      width: 14rem;
+      background: transparent url("../../images/finger@2x.png") 0% 0% no-repeat
+        padding-box;
       background-position: center;
       background-size: contain;
     }
   }
   &__offline-image {
-    position: relative;
-    width: 48rem;
-    height: 40rem;
     &--cloud {
       @include absCenter;
-      width: 60rem;
-      background: transparent url("../../images/product_pic@2x.png") 0% 0%
-        no-repeat padding-box;
+      width: 48rem;
+      top: 25%;
+      left: 54%;
+      background: transparent url("../../images/cloud@2x.png") 0% 0% no-repeat
+        padding-box;
+      // background: url("../../images/cloud@2x.png"),
+      //   linear-gradient(180deg, #373f49, #38414d);
+      background-blend-mode: color-dodge;
       background-position: center;
       background-size: contain;
     }
     &--card {
       @include absCenter;
-      top: 40%;
-      width: 30rem;
-      background: transparent url("../../images/CAFECA_4@2x.png") 0% 0%
+      top: 50%;
+      left: 25%;
+      width: 17rem;
+      background: transparent url("../../images/CAFECA_6@2x.png") 0% 0%
         no-repeat padding-box;
       background-position: center;
       background-size: contain;
     }
     &--plus {
       @include absCenter;
-      top: 40%;
-      width: 30rem;
-      background: transparent url("../../images/CAFECA_4@2x.png") 0% 0%
-        no-repeat padding-box;
+      top: 43%;
+      width: 3rem;
+      background: transparent url("../../images/Union 1@2x.png") 0% 0% no-repeat
+        padding-box;
       background-position: center;
       background-size: contain;
     }
   }
   &__device-image {
-    position: relative;
-    width: 48rem;
-    height: 40rem;
     &--devices {
       @include absCenter;
-      width: 60rem;
-      background: transparent url("../../images/product_pic@2x.png") 0% 0%
-        no-repeat padding-box;
+      background: transparent url("../../images/devices@2x.png") 0% 0% no-repeat
+        padding-box;
       background-position: center;
       background-size: contain;
     }
     &--card {
       @include absCenter;
-      top: 40%;
-      width: 30rem;
-      background: transparent url("../../images/CAFECA_4@2x.png") 0% 0%
+      top: 7%;
+      left: 49%;
+      width: 20rem;
+      background: transparent url("../../images/CAFECA_5@2x.png") 0% 0%
         no-repeat padding-box;
       background-position: center;
       background-size: contain;
     }
     &--light {
       @include absCenter;
-      top: 40%;
-      width: 30rem;
+      top: 8%;
+      left: 47%;
+      width: 18rem;
+      background: transparent url("../../images/light@2x.png") 0% 0% no-repeat
+        padding-box;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+  &__trace-image {
+    &--spotlight {
+      @include absCenter;
+      background: url("../../images/spotlight_2@2x.png"),
+        linear-gradient(180deg, #2f3f56 82%, #22324f);
+      // background: transparent url("../../images/spotlight_2@2x.png") 0% 0%
+      //   no-repeat padding-box;
+      background-position: center;
+      background-size: contain;
+      background-blend-mode: color-dodge;
+    }
+    &--card {
+      @include absCenter;
+
+      width: 20rem;
       background: transparent url("../../images/CAFECA_4@2x.png") 0% 0%
         no-repeat padding-box;
       background-position: center;
       background-size: contain;
     }
+    &--keyprint {
+      @include absCenter;
+      top: 0%;
+      left: 47%;
+      width: 24rem;
+      background: transparent url("../../images/keyprint@2x.png") 0% 0%
+        no-repeat padding-box;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+  &__line-image {
+    // width: 90rem;
+    height: 30rem;
+    margin: 0rem 0 8rem;
+    &--1 {
+      margin-bottom: 10rem;
+      background: transparent url("../../images/line01@2x.png") 0% 0% no-repeat
+        padding-box;
+      background-position: center;
+      background-size: contain;
+    }
+    &--2 {
+      background: transparent url("../../images/line02@2x.png") 0% 0% no-repeat
+        padding-box;
+      background-position: center;
+      background-size: contain;
+    }
+    &--3 {
+      background: transparent url("../../images/line03@2x.png") 0% 0% no-repeat
+        padding-box;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+  &__buttons {
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+    margin-top: 6rem;
+  }
+  &__button {
+    min-width: 18rem;
+  }
+  &__button:first-child {
+    background-color: $color-blue;
   }
 }
 
@@ -170,3 +259,49 @@
     }
   }
 }
+
+@include respond(phone) {
+  .products {
+    &__finger,
+    &__offline,
+    &__device,
+    &__trace {
+      flex-direction: column;
+    }
+    &__image-box {
+      flex: auto;
+    }
+    &__content {
+      flex: 1;
+    }
+    &__intro-image {
+      --ratio: calc(100vw / 1280px);
+      &--circle {
+        width: calc(60rem * 0.8);
+      }
+      &--card {
+        width: calc(30rem * 0.8);
+      }
+      // transform: translate(-50%, -50%) scale(var(--ratio));
+    }
+  }
+}
+@include respond(iphone) {
+  .products {
+    &__buttons {
+      gap: 2rem;
+    }
+    &__button {
+      min-width: 12rem;
+    }
+  }
+}
+
+// @include respond(iphone12) {
+//   .products {
+//     &__buttons {
+//       margin-top: 6rem;
+//       flex-direction: column;
+//     }
+//   }
+// }

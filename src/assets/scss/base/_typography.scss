@@ -1,109 +1,147 @@
 @import url("https://fonts.googleapis.com/css2?family=Amaranth:wght@700&family=Dosis:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&family=Open+Sans:wght@600;700;800&display=swap");
 
-p.emphasize--primary {
+.emphasize--primary {
   font-family: "Dosis";
   font-weight: 600;
   font-size: 80px;
+  letter-spacing: 0;
 }
-h1.header-primary {
+.header-primary {
   font-family: "Dosis";
-  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+.header-secondary {
+  font-family: "Noto Sans TC";
+  font-weight: 400;
+}
+h1 {
   // font-size: 4.8rem;
   font-size: 48px;
   letter-spacing: 0;
-  line-height: 1;
+  &.header-primary {
+    font-weight: 600;
+  }
+  &.header-secondary {
+    line-height: 1;
+  }
 }
-h2.header-primary {
-  font-family: "Dosis";
+h2 {
   // font-size: 4rem;
   font-size: 40px;
   letter-spacing: 0;
-  line-height: 1;
-  &--bold {
-    font-weight: 700;
+  &.header-primary {
+    &--bold {
+      font-weight: 700;
+    }
+    &--medium {
+      font-weight: 500;
+    }
   }
-  &--medium {
-    font-weight: 500;
-  }
-}
-h2.header-secondary {
-  font-family: "Noto Sans TC";
-  // font-size: 4rem;
-  font-size: 40px;
-  letter-spacing: 0;
-  line-height: 1;
-  &--bold {
-    font-weight: 700;
-  }
-  &--medium {
-    font-weight: 500;
+  .header-secondary {
+    line-height: 1.125;
+    &--bold {
+      font-weight: 700;
+    }
+    &--medium {
+      font-weight: 500;
+    }
   }
 }
-h3.header-secondary {
-  font-family: "Noto Sans TC";
-  font-weight: 400;
-  font-size: 20px;
+h3 {
   // font-size: 2rem;
+  font-size: 20px;
   letter-spacing: 0;
-  // line-height: 1;
+  font-weight: 400;
+  &.header-primary {
+    font-weight: 500;
+    font-size: 30px;
+  }
+  &.header-secondary {
+    line-height: 1.125;
+  }
 }
-h4.header-primary {
-  font-family: "Dosis";
-  font-weight: 500;
+h4 {
   // font-size: 1.8rem;
   font-size: 18px;
   letter-spacing: 0;
-  line-height: 1;
-  &--grey {
-    color: $color-grey-light-1;
+  &.header-primary {
+    font-weight: 400;
+    &--grey {
+      color: $color-grey-light-1;
+    }
   }
 }
-h4.header-secondary {
-  font-family: "Noto Sans TC";
-  font-weight: 700;
-  // font-size: 1.8rem;
-  font-size: 18px;
-  letter-spacing: 0;
-  line-height: 1;
-  &--grey {
-    color: $color-grey-light-1;
-  }
-}
-h5.header-secondary {
-  font-family: "Noto Sans TC";
-  font-weight: 300;
+p {
   // font-size: 1.6rem;
   font-size: 16px;
   letter-spacing: 0;
-  // line-height: 1;
-  &--grey {
-    color: $color-grey-light-1;
+  line-height: 1.875;
+  &.header-primary {
+    font-weight: 300;
   }
-  &--regular {
+  &.header-secondary {
+    font-weight: 300;
+    &--grey {
+      color: $color-grey-light-1;
+    }
+    &--regular {
+      font-weight: 400;
+    }
+  }
+}
+button {
+  font-family: "Noto Sans TC";
+  font-size: 18px;
+  letter-spacing: 36;
+  font-weight: 700;
+  line-height: 1.67;
+}
+
+@include respond(phone) {
+  .emphasize--primary {
+    font-size: 70px;
+  }
+  .header-primary {
+    font-family: "Dosis";
+    line-height: 1.25;
+    letter-spacing: 0;
+  }
+  .header-secondary {
+    font-family: "Noto Sans TC";
     font-weight: 400;
   }
-}
-h5.header-primary {
-  font-family: "Dosis";
-  font-weight: 300;
-  // font-size: 1.6rem;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: 1.6;
-}
-h6.header-primary {
-  font-family: "Dosis";
-  font-weight: 300;
-  // font-size: 1.4rem;
-  font-size: 14px;
-  letter-spacing: 0;
-  line-height: 1;
-}
-h6.header-secondary {
-  font-family: "Noto Sans TC";
-  font-weight: 300;
-  // font-size: 1.4rem;
-  font-size: 14px;
-  letter-spacing: 0;
-  line-height: 1;
+  h1 {
+    font-size: 30px;
+    &.header-secondary {
+      letter-spacing: 36;
+      line-height: 1.5;
+    }
+  }
+  h2 {
+    font-size: 24px;
+    &.header-primary {
+      font-size: 28px;
+    }
+    .header-secondary {
+      letter-spacing: 36;
+      line-height: 1.25;
+    }
+  }
+  h3 {
+    &.header-primary {
+      font-size: 24px;
+    }
+    &.header-secondary {
+      line-height: 1.5;
+      font-size: 20px;
+    }
+  }
+  h4 {
+    font-size: 16px;
+    letter-spacing: 36;
+    &.header-primary {
+      line-height: 1.875;
+    }
+  }
 }

@@ -5,55 +5,55 @@ const Data = (props) => {
   const { t } = useTranslation();
   return (
     <div className="data">
-      <h2 className="specialize__header header-primary header-primary--medium">
-        {t("specialize_header")}
+      <h2 className="data__header header-primary header-primary--medium">
+        {t("data_header")}
       </h2>
       <div className="data__container">
         <div className="data__content">
           <div className="data__title">
-            <h5 className="header-secondary">
+            <p className="header-secondary">
               {t("data_title_1")}
-            </h5>
+            </p>
           </div>
           <div className="data__image-box"></div>
           {/* ++TODO*/}
           {/* https://react.i18next.com/latest/trans-component */}
           <div className="data__text">
-            <h5 className="header-secondary">
+            <p className="header-secondary">
               {t("data_text_1_1")}
-            </h5>
+            </p>
             <p className="emphasize--primary">70</p>
-            <h5 className="header-secondary">
+            <p className="header-secondary">
               {t("data_text_1_2")}
-            </h5>
+            </p>
           </div>
         </div>
         <div className="data__content">
           <div className="data__title">
-            <h5 className="header-secondary">
+            <p className="header-secondary">
               {t("data_title_2")}
-            </h5>
+            </p>
           </div>
           <div className="data__image-box"></div>
           <div className="data__text">
             <p className="emphasize--primary">58.4</p>
-            <h5 className="header-secondary">
+            <p className="header-secondary">
               {t("data_text_2")}
-            </h5>
+            </p>
           </div>
         </div>
         <div className="data__content">
           <div className="data__title">
-            <h5 className="header-secondary">
+            <p className="header-secondary">
               {t("data_title_3")}
-            </h5>
+            </p>
           </div>
           <div className="data__image-box"></div>
           <div className="data__text">
             <p className="emphasize--primary">6300</p>
-            <h5 className="header-secondary">
+            <p className="header-secondary">
               {t("data_text_3")}
-            </h5>
+            </p>
           </div>
         </div>
       </div>

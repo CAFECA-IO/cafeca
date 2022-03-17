@@ -2,6 +2,81 @@
   text-align: center;
   padding-top: 10rem;
   padding-bottom: 28.6rem;
+  position: relative;
+  &__bg-img {
+    position: absolute;
+    z-index: 1;
+    top: -8rem;
+    &--star {
+      width: 100vw;
+      height: 100rem;
+      background: transparent url(../../images/stars-bottom@2x.png) 0% 0%
+        no-repeat padding-box;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+  &__background {
+    position: absolute;
+    z-index: 1;
+    // pointer-events: none;
+    &--1 {
+      // top: 3320px;
+      // left: -660px;
+      bottom: -17rem;
+      left: calc(-100vw * 0.515625);
+      // width: 153rem;
+      // height: 113rem;
+      width: calc(100vw * 1.1953125);
+      height: calc(100vw * 0.8828125);
+      background: transparent
+        radial-gradient(
+          closest-side at 50% 50%,
+          #b1111db2 0%,
+          #9e0f1ab3 21%,
+          #59090f00 100%
+        )
+        0% 0% no-repeat padding-box;
+      mix-blend-mode: screen;
+      opacity: 1;
+    }
+    &--2 {
+      // top: 3830px;
+      // left: 500px;
+      bottom: -33rem;
+      left: calc(100vw * 0.390625);
+      // width: 84rem;
+      // height: 84rem;
+      width: calc(100vw * 0.65625);
+      height: calc(100vw * 0.65625);
+      background: transparent
+        radial-gradient(closest-side at 50% 50%, #003060 0%, #000a1300 100%) 0%
+        0% no-repeat padding-box;
+      mix-blend-mode: screen;
+      opacity: 1;
+    }
+    &--3 {
+      // top: 3090px;
+      // left: 765px;
+      bottom: 12rem;
+      left: calc(100vw * 0.59765625);
+      // width: 116rem;
+      // height: 116rem;
+      width: calc(100vw * 0.90625);
+      height: calc(100vw * 0.90625);
+      /* UI Properties */
+      background: transparent
+        radial-gradient(
+          closest-side at 50% 50%,
+          #006b7fb2 0%,
+          #0049577b 35%,
+          #00000000 100%
+        )
+        0% 0% no-repeat padding-box;
+      mix-blend-mode: screen;
+      opacity: 1;
+    }
+  }
   &__container {
     max-width: 114rem;
     margin: 0 auto;
@@ -14,12 +89,7 @@
   }
   &__image-box {
     flex: 1;
-    // width: 38.8rem;
-    // height: 27.2rem;
-    // background: transparent url("../../images/CAFECA@2x.png") 0% 0% no-repeat
-    // padding-box;
-    // background-position: center;
-    // background-size: contain;
+    z-index: 2;
   }
   &__image {
     width: 40rem;
@@ -30,6 +100,7 @@
   }
   &__form-box {
     flex: 1;
+    z-index: 2;
   }
 }
 
@@ -42,6 +113,29 @@
     &__content {
       flex-direction: column;
       gap: 4rem;
+    }
+    &__form-box {
+      width: 100%;
+      padding: 0 6rem;
+    }
+    &__background {
+      &--1 {
+        top: calc(100vw * 0.21);
+        bottom: none;
+      }
+      &--2 {
+        top: calc(100vw * 0.78);
+        bottom: none;
+      }
+      &--3 {
+        top: calc(100vw * 0.1);
+        bottom: none;
+      }
+    }
+    &__bg-img {
+      &--star {
+        height: 240rem;
+      }
     }
   }
 }
