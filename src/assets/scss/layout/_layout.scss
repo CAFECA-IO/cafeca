@@ -177,7 +177,7 @@
     display: block;
   }
 }
-@include respond(phone) {
+@include respond(iphone) {
   .layout {
     background: transparent
       linear-gradient(

@@ -9,7 +9,7 @@ const Dropdown = ({ feature, setFeature, features }) => {
     <div className="dropdown">
       <div className="dropdown__label-box">
         <div className="dropdown__label">
-          <h4 className="header-secondary">{t(feature)}</h4>
+          <h4 className="header-primary">{t(feature)}</h4>
         </div>
         <label
           className="dropdown__button"
@@ -38,7 +38,7 @@ const Dropdown = ({ feature, setFeature, features }) => {
                 setOpen(false);
               }}
             >
-              <h4 className="header-secondary">{t(key)}</h4>
+              <h4 className="header-primary">{t(key)}</h4>
             </div>
           ))}
       </div>

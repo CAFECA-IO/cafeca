@@ -35,13 +35,13 @@ const SpecializeItem = ({ title, des, key }) => {
       <div className="specialize__item--decoration">
         <div></div>
       </div>
-      <h5
+      <p
         className={`header-secondary${
           special[title][des] ? " " : " header-secondary--grey"
         }`}
       >
         {t(des)}
-      </h5>
+      </p>
     </li>
   );
 };
@@ -108,7 +108,7 @@ const Specialize = (props) => {
               <div className="specialize__icon specialize__icon--long"></div>
             </div>
             <div className="specialize__control-label">
-              <h6 className="header-secondary">{t("specialize_title_1")}</h6>
+              <p className="header-secondary">{t("specialize_title_1")}</p>
             </div>
           </button>
           <button
@@ -117,7 +117,7 @@ const Specialize = (props) => {
             disabled={currentIndex === 2}
           >
             <div className="specialize__control-label">
-              <h6 className="header-secondary">{t("specialize_title_3")}</h6>
+              <p className="header-secondary">{t("specialize_title_3")}</p>
             </div>
             <div className="specialize__control-icon">
               <div className="specialize__icon specialize__icon--short"></div>

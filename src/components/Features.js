@@ -101,7 +101,7 @@ const Features = (props) => {
                 {contents[key].des.map((d) => (
                   <li className="features__text" key={d}>
                     <div className="features__text--decoration"></div>
-                    <h5 className="header-primary">{t(d)}</h5>
+                    <p className="header-primary">{t(d)}</p>
                   </li>
                 ))}
               </ul>
@@ -125,7 +125,7 @@ const Features = (props) => {
               <ul className="features__content">
                 {["others_description_1", "others_description_2"].map((key) => (
                   <li className="features__text" key={key}>
-                    <h5 className="header-primary">{t(key)}</h5>
+                    <p className="header-primary">{t(key)}</p>
                   </li>
                 ))}
               </ul>

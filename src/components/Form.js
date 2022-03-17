@@ -28,7 +28,7 @@ export const Form = (props) => {
               <div className="form__checkbox">
                 <div></div>
               </div>
-              <h5 className="header-secondary">{t("tech_question")}</h5>
+              <p className="header-secondary">{t("tech_question")}</p>
             </label>
           </div>
           <div className="form__checkbox-group">
@@ -41,7 +41,7 @@ export const Form = (props) => {
               <div className="form__checkbox">
                 <div></div>
               </div>
-              <h5 className="header-secondary">{t("cooperate_question")}</h5>
+              <p className="header-secondary">{t("cooperate_question")}</p>
             </label>
           </div>
         </div>
@@ -56,7 +56,7 @@ export const Form = (props) => {
               <div className="form__checkbox">
                 <div></div>
               </div>
-              <h5 className="header-secondary">{t("price_question")}</h5>
+              <p className="header-secondary">{t("price_question")}</p>
             </label>
           </div>
           <div className="form__checkbox-group">
@@ -69,7 +69,7 @@ export const Form = (props) => {
               <div className="form__checkbox">
                 <div></div>
               </div>
-              <h5 className="header-secondary">{t("others_question")}</h5>
+              <p className="header-secondary">{t("others_question")}</p>
             </label>
           </div>
         </div>

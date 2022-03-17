@@ -13,9 +13,9 @@ const Products = (props) => {
           </div>
           <div className="products__intro-content">
             <h1 className="products__intro-header header-primary">CAFECA</h1>
-            <h5 className="products__intro-description header-secondary">
+            <p className="products__intro-description header-secondary">
               {t("product_introducion")}
-            </h5>
+            </p>
             <button className="products__intro-button button buttom--icon"></button>
           </div>
         </div>
@@ -29,12 +29,12 @@ const Products = (props) => {
             <h3 className="products__header header-secondary">
               {t("product_title_1")}
             </h3>
-            <h5 className="products__description header-secondary">
+            <p className="products__description header-secondary">
               {t("product_description_1-1")}
-            </h5>
-            <h5 className="products__description header-secondary">
+            </p>
+            <p className="products__description header-secondary">
               {t("product_description_1-2")}
-            </h5>
+            </p>
           </div>
         </div>
         <div className="products__line-image products__line-image--1"></div>
@@ -48,12 +48,12 @@ const Products = (props) => {
             <h3 className="products__header header-secondary">
               {t("product_title_2")}
             </h3>
-            <h5 className="products__description header-secondary">
+            <p className="products__description header-secondary">
               {t("product_description_2-1")}
-            </h5>
-            <h5 className="products__description header-secondary">
+            </p>
+            <p className="products__description header-secondary">
               {t("product_description_2-2")}
-            </h5>
+            </p>
           </div>
         </div>
         <div className="products__line-image products__line-image--2"></div>
@@ -67,12 +67,12 @@ const Products = (props) => {
             <h3 className="products__header header-secondary">
               {t("product_title_3")}
             </h3>
-            <h5 className="products__description header-secondary">
+            <p className="products__description header-secondary">
               {t("product_description_3-1")}
-            </h5>
-            <h5 className="products__description header-secondary">
+            </p>
+            <p className="products__description header-secondary">
               {t("product_description_3-2")}
-            </h5>
+            </p>
           </div>
         </div>
         <div className="products__line-image products__line-image--3"></div>
@@ -86,12 +86,12 @@ const Products = (props) => {
             <h3 className="products__header header-secondary">
               {t("product_title_4")}
             </h3>
-            <h5 className="products__description header-secondary">
+            <p className="products__description header-secondary">
               {t("product_description_4-1")}
-            </h5>
-            <h5 className="products__description header-secondary">
+            </p>
+            <p className="products__description header-secondary">
               {t("product_description_4-2")}
-            </h5>
+            </p>
           </div>
         </div>
         <div className="products__buttons">
