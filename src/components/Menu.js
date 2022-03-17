@@ -11,24 +11,14 @@ const Menu = (props) => {
       onClick={props.closeMenuHandler}
     >
       <div className="menu__container">
-        {/* <li className="menu__item">
+        <li className="menu__item">
           <a className="menu__link" href="/about">
-            {t("about-us")}
+            {t("about_us")}
           </a>
         </li>
-        <li className="menu__item">
+        {/* <li className="menu__item">
           <a className="menu__link" href="/products">
             {t("products_introduction")}
-          </a>
-        </li>
-        <li className="menu__item">
-          <a className="menu__link" href="/team">
-            {t("our_team")}
-          </a>
-        </li>
-        <li className="menu__item">
-          <a className="menu__link" href="/contact">
-            {t("contact_us")}
           </a>
         </li> */}
         <li className="menu__item">

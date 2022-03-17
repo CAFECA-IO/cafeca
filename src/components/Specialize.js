@@ -53,7 +53,9 @@ const SpecializeCard = ({ title, index, currentIndex, key }) => {
       className={`specialize__card${currentIndex === index ? " active" : ""}`}
       key={key}
     >
-      <div className="specialize__card--title">
+      <div
+        className={`specialize__card--title${index === 1 ? " emphasize" : ""}`}
+      >
         <h2 className="header-secondary header-secondary--bold">{t(title)}</h2>
       </div>
       <ul className="specialize__card--content">
