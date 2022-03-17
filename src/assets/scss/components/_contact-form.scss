@@ -118,11 +118,6 @@
       width: 100%;
       padding: 0 6rem;
     }
-  }
-}
-
-@include respond(phone) {
-  .contact-form {
     &__background {
       &--1 {
         top: calc(100vw * 0.21);
@@ -137,8 +132,8 @@
         bottom: none;
       }
     }
-    &__bg-img{
-      &--star{
+    &__bg-img {
+      &--star {
         height: 240rem;
       }
     }

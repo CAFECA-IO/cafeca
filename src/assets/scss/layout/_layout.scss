@@ -177,6 +177,45 @@
     display: block;
   }
 }
+@include respond(tab-port) {
+  .layout {
+    background: transparent
+      linear-gradient(
+        180deg,
+        #00133e 0%,
+        #343a40 17%,
+        #3e4c5e 67%,
+        #00133e 100%
+      )
+      0% 0% no-repeat padding-box;
+    &__background {
+      &--1 {
+        transform: translate(0, 20%);
+      }
+      &--2 {
+        transform: translate(5%, 55%);
+      }
+      &--3 {
+        transform: translate(0%, 30%);
+      }
+      &--4 {
+        transform: translate(0, -140rem);
+      }
+      &--5 {
+        transform: translate(5%, -140rem);
+      }
+      &--6 {
+        transform: translate(0%, -140rem);
+      }
+    }
+    &__bg-img {
+      &--earth {
+        display: none;
+      }
+    }
+  }
+}
+
 @include respond(iphone) {
   .layout {
     background: transparent

@@ -184,10 +184,10 @@
   &__trace-image {
     &--spotlight {
       @include absCenter;
-      // background: url("../../images/spotlight_2@2x.png"),
-      //   linear-gradient(180deg, #3c495a 82%, #3a495b);
-      background: transparent url("../../images/spotlight_2@2x.png") 0% 0%
-        no-repeat padding-box;
+      background: url("../../images/spotlight_2@2x.png"),
+        linear-gradient(180deg, #2f3f56 82%, #22324f);
+      // background: transparent url("../../images/spotlight_2@2x.png") 0% 0%
+      //   no-repeat padding-box;
       background-position: center;
       background-size: contain;
       background-blend-mode: color-dodge;
