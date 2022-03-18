@@ -74,10 +74,10 @@ const Features = (props) => {
     },
     government: {
       des: [
-        "travel_description_1",
-        "travel_description_2",
-        "travel_description_3",
-        "travel_description_4",
+        "government_description_1",
+        "government_description_2",
+        "government_description_3",
+        "government_description_4",
       ],
       img: "gov@2x.png",
     },
