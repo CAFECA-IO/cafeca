@@ -9,7 +9,16 @@ export const useScrollport = () => {
 
 const ScrollportProvider = ({ children }) => {
   const [triggered, setTriggered] = React.useState(false);
-  const handleWindowScroll = () => {};
+  const handleWindowScroll = () => {
+    var windowHeight = window.innerHeight;
+    var elementTop = children.getBoundingClientRect().top;
+    var elementVisible = children.clientHeight;
+    if (elementTop < windowHeight - elementVisible) {
+      setTriggered(true);
+    } else {
+      setTriggered(false);
+    }
+  };
 
   React.useEffect(() => {
     window.addEventListener("scroll", handleWindowScroll);
