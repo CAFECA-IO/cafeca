@@ -68,14 +68,18 @@
       opacity: 1;
     }
   }
-  &__button {
-    align-self: flex-end;
-  }
   &__content {
-    max-width: 40rem;
+    max-width: 45.3rem;
     display: flex;
     flex-direction: column;
     gap: 3rem;
+  }
+  &__content > *:not(:last-child){
+    animation: 2s right-slidein-main;
+  }
+  &__button {
+    align-self: flex-end;
+    animation: 2s bottom-slidein-card;
   }
   &__image {
     position: relative;
@@ -91,8 +95,13 @@
         background: transparent url(../../images/spotlight@2x.png) 0% 0%
           no-repeat padding-box;
         position: absolute;
+        transform-origin: bottom;
         background-position: center;
         background-size: cover;
+        animation: 1s bottom-slidein-light;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+        opacity: 0;
       }
       &:nth-child(2) {
         top: 16rem;
@@ -104,6 +113,10 @@
         position: absolute;
         background-position: center;
         background-size: cover;
+        animation: 2s bottom-slidein-1;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+        opacity: 0;
       }
       &:nth-child(3) {
         top: 10rem;
@@ -115,6 +128,10 @@
         position: absolute;
         background-position: center;
         background-size: cover;
+        animation: 2s bottom-slidein-2;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+        opacity: 0;
       }
       &:nth-child(4) {
         top: 10rem;
@@ -126,6 +143,10 @@
         position: absolute;
         background-position: center;
         background-size: cover;
+        animation: 2s bottom-slidein-1;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+        opacity: 0;
       }
       &:nth-child(5) {
         top: 16rem;
@@ -137,6 +158,10 @@
         position: absolute;
         background-position: center;
         background-size: cover;
+        animation: 2s bottom-slidein-2;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+        opacity: 0;
       }
       &:nth-child(6) {
         top: 32.5rem;
@@ -148,18 +173,32 @@
         position: absolute;
         background-position: center;
         background-size: cover;
+        animation: 2s bottom-slidein-card;
       }
       &:nth-child(7) {
+        top: 32.7rem;
+        left: 6.4rem;
+        width: 52.7rem;
+        height: 22.8rem;
+        background: transparent url(../../images/lights@2x.png) 0% 0% no-repeat
+          padding-box;
+        position: absolute;
+        background-position: center;
+        background-size: cover;
+        // animation: 2s bottom-slidein;
+      }
+      &:nth-child(8) {
         top: 22rem;
         left: 25.8rem;
         width: 19.1rem;
         height: 29.5rem;
         transform: matrix(1, -0.07, 0.07, 1, 0, 0);
-        background: transparent url(../../images/fingerprint.png) 0% 0%
+        background: transparent url(../../images/fingerprint@2x.png) 0% 0%
           no-repeat padding-box;
         position: absolute;
         background-position: center;
         background-size: cover;
+        animation: 2s bottom-slidein-fingerprint;
       }
     }
   }
@@ -250,6 +289,12 @@
           height: calc(28rem * 0.8);
         }
         &:nth-child(7) {
+          top: calc(32.7rem * 0.8);
+          left: calc(6.4rem * 0.8);
+          width: calc(52.7rem * 0.8);
+          height: calc(22.8rem * 0.8);
+        }
+        &:nth-child(8) {
           top: calc(22rem * 0.8);
           left: calc(25.8rem * 0.8);
           width: calc(19.1rem * 0.8);
@@ -304,6 +349,12 @@
           height: calc(28rem * 0.7);
         }
         &:nth-child(7) {
+          top: calc(32.7rem * 0.7);
+          left: calc(6.4rem * 0.7);
+          width: calc(52.7rem * 0.7);
+          height: calc(22.8rem * 0.7);
+        }
+        &:nth-child(8) {
           top: calc(22rem * 0.7);
           left: calc(25.8rem * 0.7);
           width: calc(19.1rem * 0.7);
