@@ -105,7 +105,7 @@ const ContactForm = (props) => {
       setTriggered(false);
     }
   }, [containerRef]);
-  
+
   useEffect(() => {
     window.addEventListener("scroll", handleWindowScroll);
     return () => window.removeEventListener("scroll", handleWindowScroll);
@@ -127,8 +127,14 @@ const ContactForm = (props) => {
       <div className="contact-form__container">
         <div className="contact-form__content">
           <div className="contact-form__image-box">
-            <div className="contact-form__image">
+            {/* <div className="contact-form__image">
               <img src={require("../assets/images/CAFECA@2x.png")} alt="card" />
+            </div> */}
+            <div className="contact-form__image">
+              <div className="contact-form__image--inner">
+                <div className="contact-form__image--front"></div>
+                <div className="contact-form__image--back"></div>
+              </div>
             </div>
           </div>
           <div className="contact-form__form-box">
