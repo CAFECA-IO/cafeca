@@ -4,12 +4,17 @@ import { useTranslation } from "react-i18next";
 const Products = (props) => {
   const { t } = useTranslation();
   return (
-    <div className="products">
+    <div className="products intro">
       <div className="products__container">
         <div className="products__intro">
           <div className="products__intro-image">
             <div className="products__intro-image products__intro-image--circle"></div>
-            <div className="products__intro-image products__intro-image--card"></div>
+            <div className="products__intro-image products__intro-image--card">
+              <div class="products__intro-image--card-inner">
+                <div class="products__intro-image--card-front"></div>
+                <div class="products__intro-image--card-back"></div>
+              </div>
+            </div>
           </div>
           <div className="products__intro-content">
             <h1 className="products__intro-header header-primary">CAFECA</h1>

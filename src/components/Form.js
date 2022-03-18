@@ -92,7 +92,7 @@ const ContactForm = (props) => {
   const { t } = useTranslation();
 
   return (
-    <div className="contact-form">
+    <div className="contact-form" id="contact-us">
       <div className="contact-form__background contact-form__background--1"></div>
       <div className="contact-form__background contact-form__background--2"></div>
       <div className="contact-form__background contact-form__background--3"></div>
