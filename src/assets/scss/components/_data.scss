@@ -1,6 +1,112 @@
+@property --country {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+@property --user {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+@property --percent {
+  syntax: "<number>";
+  initial-value: 0;
+  inherits: false;
+}
+@property --temp {
+  syntax: "<number>";
+  initial-value: 0;
+  inherits: false;
+}
+@property --v1 {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+@property --v2 {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+@keyframes country_counter {
+  from {
+    --country: 0;
+  }
+  to {
+    --country: 70;
+  }
+}
+
+@keyframes CAGR_counter {
+  from {
+    --v1: 0;
+    --v2: 0;
+  }
+  to {
+    --v1: 54;
+    --v2: 80;
+  }
+}
+@keyframes user_counter {
+  from {
+    --user: 0;
+  }
+  to {
+    --user: 6300;
+  }
+}
+
 .data {
   text-align: center;
   padding-bottom: 20.3rem;
+  &__container.active &__count {
+    &--country {
+      animation: country_counter 5s forwards alternate ease-in-out;
+    }
+    // &--country::after {
+    //   content: counter(num);
+    // }
+    &--user {
+      animation: user_counter 5s forwards alternate ease-in-out;
+    }
+    // &--user::after {
+    //   content: counter(num);
+    // }
+    &--CAGR {
+      animation: CAGR_counter 5s forwards alternate ease-in-out;
+    }
+    // &--CAGR::before {
+    //   content: counter(v1) "." counter(v2, decimal-leading-zero);
+    // }
+  }
+  &__count {
+    &--country {
+      // animation: country_counter 5s forwards alternate ease-in-out;
+      counter-reset: num var(--country);
+    }
+    &--country::after {
+      content: counter(num);
+    }
+    &--user {
+      // animation: user_counter 5s forwards alternate ease-in-out;
+      counter-reset: num var(--user);
+    }
+    &--user::after {
+      content: counter(num);
+    }
+    &--CAGR {
+      // animation: CAGR_counter 5s forwards alternate ease-in-out;
+      transition: --percent 1s;
+      --temp: calc(var(--percent) * 100);
+      --v1: max(var(--temp) - 0.5, 0);
+      --v2: max((var(--temp) - var(--v1)) * 100 - 0.5, 0);
+      counter-reset: v1 var(--v1) v2 var(--v2);
+    }
+    &--CAGR::before {
+      content: counter(v1) "." counter(v2, decimal-leading-zero);
+    }
+  }
   &__container {
     display: flex;
     max-width: 95rem;
@@ -12,6 +118,9 @@
     flex-direction: column;
     align-items: center;
     margin-top: 6rem;
+  }
+  &__content:last-child {
+    min-width: 21.4rem;
   }
   //   &__title {
   //   }
@@ -52,7 +161,7 @@
 }
 
 @include respond(phone) {
-  .data{
+  .data {
     &__container {
       flex-direction: column;
     }

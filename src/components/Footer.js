@@ -28,12 +28,16 @@ const Footer = (props) => {
             <p className="header-primary">{t("service")}</p>
           </div>
           <ul className="footer__infos">
-            <li className="footer__info">
-              <p className="header-primary">{t("product_info")}</p>
-            </li>
-            <li className="footer__info">
-              <p className="header-primary">{t("become_partner")}</p>
-            </li>
+            <a href="/products">
+              <li className="footer__info">
+                <p className="header-primary">{t("product_info")}</p>
+              </li>
+            </a>
+            <a href="/#contact-us">
+              <li className="footer__info">
+                <p className="header-primary">{t("become_partner")}</p>
+              </li>
+            </a>
           </ul>
         </div>
         <div className="footer__content">
@@ -41,20 +45,21 @@ const Footer = (props) => {
             <p className="header-primary">{t("info")}</p>
           </div>
           <ul className="footer__infos">
-            <li className="footer__info">
-              <p className="header-primary">{t("about_us")}</p>
-            </li>
-            <li className="footer__info">
-              <p className="header-primary">{t("our_team")}</p>
-            </li>
-            <li className="footer__info">
-              <p className="header-primary">{t("contact_us")}</p>
-            </li>
+            <a href="/about">
+              <li className="footer__info">
+                <p className="header-primary">{t("about_us")}</p>
+              </li>
+            </a>
+            <a href="/#contact-us">
+              <li className="footer__info">
+                <p className="header-primary">{t("contact_us")}</p>
+              </li>
+            </a>
           </ul>
         </div>
       </div>
       <div className="footer__copyright">
-      <p className="header-primary">@ CAFECA 2022</p>
+        <p className="header-primary">@ CAFECA 2022</p>
       </div>
     </footer>
   );

@@ -22,6 +22,10 @@
   &__header {
     margin-top: 4rem;
     margin-bottom: 4rem;
+    animation: 1s ease-in top-slidein;
+  }
+  &__services{
+    animation: 1s ease-in right-slidein-about;
   }
   &__text {
     margin-bottom: 4rem;
@@ -31,7 +35,7 @@
   }
   &__content--image {
     margin-top: 10rem;
-    z-index: 100 ;
+    z-index: 100;
   }
   &__image {
     height: 50rem;
@@ -41,6 +45,9 @@
     background-position: center;
     background-size: contain;
   }
+  &__content--image {
+    animation: 1s ease-in left-slidein-about;
+  }
   &__content--description {
     display: flex;
     flex-direction: column;
@@ -48,6 +55,7 @@
   &__button {
     align-self: flex-end;
     min-width: 18rem;
+    animation: 1s ease-in bottom-slidein;
   }
 }
 

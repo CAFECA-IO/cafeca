@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useCallback, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 
 export const Form = (props) => {
   const { t } = useTranslation();
+
   return (
     <form className="form">
       <div className="form__input-group">
@@ -90,9 +91,32 @@ export const Form = (props) => {
 
 const ContactForm = (props) => {
   const { t } = useTranslation();
+  const [triggered, setTriggered] = React.useState(false);
+  const containerRef = useRef();
+
+  const handleWindowScroll = useCallback(() => {
+    var windowHeight = window.innerHeight;
+    var elementTop = containerRef.current.getBoundingClientRect().top;
+    // var elementVisible = containerRef.current.clientHeight;
+    var elementVisible = 150;
+    if (elementTop < windowHeight - elementVisible) {
+      setTriggered(true);
+    } else {
+      setTriggered(false);
+    }
+  }, [containerRef]);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleWindowScroll);
+    return () => window.removeEventListener("scroll", handleWindowScroll);
+  }, [handleWindowScroll]);
 
   return (
-    <div className="contact-form">
+    <div
+      className={`contact-form${triggered ? " active" : ""}`}
+      id="contact-us"
+      ref={containerRef}
+    >
       <div className="contact-form__background contact-form__background--1"></div>
       <div className="contact-form__background contact-form__background--2"></div>
       <div className="contact-form__background contact-form__background--3"></div>
@@ -103,8 +127,14 @@ const ContactForm = (props) => {
       <div className="contact-form__container">
         <div className="contact-form__content">
           <div className="contact-form__image-box">
-            <div className="contact-form__image">
+            {/* <div className="contact-form__image">
               <img src={require("../assets/images/CAFECA@2x.png")} alt="card" />
+            </div> */}
+            <div className="contact-form__image">
+              <div className="contact-form__image--inner">
+                <div className="contact-form__image--front"></div>
+                <div className="contact-form__image--back"></div>
+              </div>
             </div>
           </div>
           <div className="contact-form__form-box">

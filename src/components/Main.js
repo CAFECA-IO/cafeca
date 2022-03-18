@@ -16,6 +16,7 @@ const Main = (props) => {
         <div className="main__image--box"></div>
         <div className="main__image--box"></div>
         <div className="main__image--box"></div>
+        <div className="main__image--box"></div>
       </div>
       <div className="main__content">
         <h1 className="header-primary">{t("leading")}</h1>
