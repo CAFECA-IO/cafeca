@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 const Products = (props) => {
   const { t } = useTranslation();
   return (
-    <div className="products intro">
+    <div className="products">
       <div className="products__container">
         <div className="products__intro">
           <div className="products__intro-image">

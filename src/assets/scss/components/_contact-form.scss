@@ -88,10 +88,6 @@
     justify-content: center;
     display: flex;
   }
-  &__image-box {
-    flex: 1;
-    z-index: 2;
-  }
   &__image {
     width: 40rem;
     margin: 0 auto;
@@ -99,9 +95,32 @@
   &__image > img {
     width: 100%;
   }
+
+  &__image-box,
   &__form-box {
     flex: 1;
     z-index: 2;
+  }
+  &__header,
+  &__image-box,
+  &__form-box {
+    opacity: 0;
+    transition: all 1s ease-in-out;
+  }
+  &__header {
+    transform: translateY(-100%);
+  }
+  &__image-box {
+    transform: translateY(80%);
+  }
+  &__form-box {
+    transform: translateX(60%);
+  }
+  &.active &__header,
+  &.active &__image-box,
+  &.active &__form-box {
+    opacity: 1;
+    transform: translate(0%);
   }
 }
 
