@@ -62,19 +62,19 @@
   padding-bottom: 20.3rem;
   &__container.active &__count {
     &--country {
-      animation: country_counter 5s forwards alternate ease-in-out;
+      animation: country_counter 0.5s forwards alternate ease-in-out;
     }
     // &--country::after {
     //   content: counter(num);
     // }
     &--user {
-      animation: user_counter 5s forwards alternate ease-in-out;
+      animation: user_counter 1s forwards alternate ease-in-out;
     }
     // &--user::after {
     //   content: counter(num);
     // }
     &--CAGR {
-      animation: CAGR_counter 5s forwards alternate ease-in-out;
+      animation: CAGR_counter 0.8s forwards alternate ease-in-out;
     }
     // &--CAGR::before {
     //   content: counter(v1) "." counter(v2, decimal-leading-zero);
