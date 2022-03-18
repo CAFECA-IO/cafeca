@@ -17,6 +17,7 @@
   &__bg-img {
     position: absolute;
     z-index: 1;
+    pointer-events: none;
     &--star {
       width: 100vw;
       height: 94rem;
@@ -45,7 +46,7 @@
   &__background {
     position: absolute;
     z-index: 1;
-    // pointer-events: none;
+    pointer-events: none;
     &--1 {
       // top: -39rem;
       // left: -84rem;
