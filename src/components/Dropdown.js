@@ -8,7 +8,7 @@ const Dropdown = ({ feature, setFeature, features }) => {
   return (
     <div className="dropdown">
       <div className="dropdown__label-box">
-        <div className="dropdown__label">
+        <div className="dropdown__label" onClick={() => setOpen((prev) => !prev)}>
           <h4 className="header-primary">{t(feature)}</h4>
         </div>
         <label
