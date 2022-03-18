@@ -21,27 +21,18 @@
 @keyframes bottom-slidein-2 {
   from {
     opacity: 0;
-    transform: translateY(14rem);
+    transform: translateY(18rem);
   }
   to {
     opacity: 1;
     transform: translateY(0rem);
   }
 }
-@keyframes bottom-slidein-card {
-  from {
-    opacity: 0;
-    transform: translateY(2rem);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0rem);
-  }
-}
+
 @keyframes bottom-slidein-fingerprint {
   from {
     opacity: 0;
-    transform: matrix(1, -0.07, 0.07, 1, 0, 0) translateY(2rem);
+    transform: matrix(1, -0.07, 0.07, 1, 0, 0) translateY(4rem);
   }
   to {
     opacity: 1;
@@ -49,13 +40,63 @@
   }
 }
 
-@keyframes right-slidein-main {
+@keyframes right-slidein {
   from {
     opacity: 0;
-    transform: translateX(2rem);
+    transform: translateX(4rem);
   }
   to {
     opacity: 1;
     transform: translateY(0rem);
   }
 }
+@keyframes left-slidein {
+  from {
+    opacity: 0;
+    transform: translateX(-4rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+@keyframes top-slidein {
+  from {
+    opacity: 0;
+    transform: translateY(-4rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+@keyframes bottom-slidein {
+  from {
+    opacity: 0;
+    transform: translateY(4rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+@keyframes right-slidein-about {
+    from {
+      opacity: 0;
+      transform: translateX(10rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0rem);
+    }
+  }
+  @keyframes left-slidein-about {
+    from {
+      opacity: 0;
+      transform: translateX(-10rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0rem);
+    }
+  }

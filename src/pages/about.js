@@ -12,10 +12,10 @@ const About = (props) => {
           <h2 className="about__header header-primary header-primary--medium">
             {t("about_us_en")}
           </h2>
-          <p className="header-secondary about__text">
-            {t("about_us_introducion")}
-          </p>
           <ul className="about__services">
+            <p className="header-secondary about__text">
+              {t("about_us_introducion")}
+            </p>
             <p className="about__services-title header-secondary">
               {t("about_us_services")}
             </p>
@@ -52,9 +52,7 @@ const About = (props) => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <p className="header-secondary">
-                  https://swap.tidebit.network
-                </p>
+                <p className="header-secondary">https://swap.tidebit.network</p>
               </a>
               <p className="header-secondary about__text">
                 {t("about_us_service_3")}

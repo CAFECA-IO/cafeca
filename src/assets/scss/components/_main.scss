@@ -75,11 +75,11 @@
     gap: 3rem;
   }
   &__content > *:not(:last-child){
-    animation: 2s right-slidein-main;
+    animation: 1s ease-in right-slidein;
   }
   &__button {
     align-self: flex-end;
-    animation: 2s bottom-slidein-card;
+    animation: 1s ease-in bottom-slidein;
   }
   &__image {
     position: relative;
@@ -98,8 +98,8 @@
         transform-origin: bottom;
         background-position: center;
         background-size: cover;
-        animation: 1s bottom-slidein-light;
-        animation-delay: 2s;
+        animation: 1s ease-in bottom-slidein-light;
+        animation-delay: 1s;
         animation-fill-mode: forwards;
         opacity: 0;
       }
@@ -113,8 +113,8 @@
         position: absolute;
         background-position: center;
         background-size: cover;
-        animation: 2s bottom-slidein-1;
-        animation-delay: 2s;
+        animation: 1s ease-in bottom-slidein-1;
+        animation-delay: 1s;
         animation-fill-mode: forwards;
         opacity: 0;
       }
@@ -128,8 +128,8 @@
         position: absolute;
         background-position: center;
         background-size: cover;
-        animation: 2s bottom-slidein-2;
-        animation-delay: 2s;
+        animation: 1s ease-in bottom-slidein-2;
+        animation-delay: 1s;
         animation-fill-mode: forwards;
         opacity: 0;
       }
@@ -143,8 +143,8 @@
         position: absolute;
         background-position: center;
         background-size: cover;
-        animation: 2s bottom-slidein-1;
-        animation-delay: 2s;
+        animation: 1s ease-in bottom-slidein-1;
+        animation-delay: 1s;
         animation-fill-mode: forwards;
         opacity: 0;
       }
@@ -158,8 +158,8 @@
         position: absolute;
         background-position: center;
         background-size: cover;
-        animation: 2s bottom-slidein-2;
-        animation-delay: 2s;
+        animation: 1s ease-in bottom-slidein-2;
+        animation-delay: 1s;
         animation-fill-mode: forwards;
         opacity: 0;
       }
@@ -173,7 +173,7 @@
         position: absolute;
         background-position: center;
         background-size: cover;
-        animation: 2s bottom-slidein-card;
+        animation: 1s ease-in bottom-slidein;
       }
       &:nth-child(7) {
         top: 32.7rem;
@@ -185,7 +185,7 @@
         position: absolute;
         background-position: center;
         background-size: cover;
-        // animation: 2s bottom-slidein;
+        // animation: 1s ease-in bottom-slidein;
       }
       &:nth-child(8) {
         top: 22rem;
@@ -198,7 +198,7 @@
         position: absolute;
         background-position: center;
         background-size: cover;
-        animation: 2s bottom-slidein-fingerprint;
+        animation: 1s ease-in bottom-slidein-fingerprint;
       }
     }
   }
