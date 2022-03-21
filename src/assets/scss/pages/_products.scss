@@ -109,17 +109,124 @@
     margin-bottom: 4rem;
   }
   &.finger &__intro-image--card {
-    transition: 2s all ease-in-out;
-    // animation: 2s ease-in-out card-slidedown-to-finger;
-    // animation-fill-mode: forwards;
     top: 238%;
-    left: 23%;
+    left: 25%;
     transform: translate(-50%, -50%) rotate(-15deg);
   }
-  &.finger-back &__intro-image--card {
-    top: 40%;
-    left: 50%;
+  &.offline &__intro-image--card {
+    top: 384%;
+    left: 48%;
+    // transform: translate(-50%, -50%) scale(0.75) rotate(15deg);
+    transform: matrix(0.52, 0.3, -0.02, 0.58, 0, 0);
   }
+  &.device &__intro-image--card {
+    top: 548%;
+    left: 8%;
+    transform: matrix(0.67, -0.4, 0, 0.8, 0, 0);
+  }
+  &.trace &__intro-image--card {
+    top: 815%;
+    left: 60%;
+    transform: matrix(0.67, 0, 0, 0.67, 0, 0);
+  }
+  &__content > &__header,
+  &__content > &__description,
+  &__finger-image--background,
+  &__offline-image--cloud,
+  &__offline-image--plus,
+  &__device-image--devices,
+  &__device-image--light,
+  &__trace-image--spotlight,
+  &__finger-image--fingerprint {
+    transition: 1s all ease-in-out;
+    opacity: 0;
+    transition-delay: 1s;
+  }
+  &__trace-image--keyprint {
+    transition: 1s all ease-in-out;
+    opacity: 0;
+    transition-delay: 2s;
+  }
+  &__finger > &__content > &__header {
+    transform: translateY(-4rem);
+  }
+  &__finger > &__content > &__description {
+    transform: translateY(4rem);
+  }
+  &.finger &__finger > &__content > &__header,
+  &.finger &__finger > &__content > &__description {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+  &.finger &__finger-image--background {
+    left: 50%;
+    opacity: 1;
+  }
+  &.finger &__finger-image--fingerprint {
+    transition-delay: 1.5s;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  &__offline > &__content > &__header {
+    transform: translateX(-36%);
+  }
+  &__offline > &__content > &__description {
+    transform: translateX(-36%);
+  }
+  &.offline &__offline > &__content > &__header,
+  &.offline &__offline > &__content > &__description {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  &.offline &__offline-image--cloud {
+    top: 25%;
+    opacity: 1;
+  }
+  &.offline &__offline-image--plus {
+    top: 53%;
+    opacity: 1;
+  }
+
+  &__device > &__content > &__header {
+    transform: translateX(36%);
+  }
+  &__device > &__content > &__description {
+    transform: translateX(36%);
+  }
+  &.device &__device > &__content > &__header,
+  &.device &__device > &__content > &__description {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  &.device &__device-image--devices {
+    top: 50%;
+    opacity: 1;
+  }
+  &.device &__device-image--light {
+    top: -2%;
+    opacity: 1;
+  }
+  &__trace > &__content > &__header {
+    transform: translateX(-36%);
+  }
+  &__trace > &__content > &__description {
+    transform: translateX(-36%);
+  }
+  &.trace &__trace > &__content > &__header,
+  &.trace &__trace > &__content > &__description {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  &.trace &__trace-image--spotlight {
+    top: 50%;
+    opacity: 1;
+  }
+  &.trace &__trace-image--keyprint {
+    top: 0%;
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
   &__finger,
   &__offline,
   &__device,
@@ -148,10 +255,12 @@
   &__finger-image {
     &--background {
       @include absCenter;
+      left: 0%;
       background: transparent url("../../images/fingerprint_2@2x.png") 0% 0%
         no-repeat padding-box;
       background-position: center;
       background-size: contain;
+      opacity: 0;
     }
     &--card {
       @include absCenter;
@@ -166,20 +275,21 @@
     }
     &--fingerprint {
       @include absCenter;
-      top: 49%;
+      opacity: 0;
       left: 48%;
       width: 14rem;
       background: transparent url("../../images/finger@2x.png") 0% 0% no-repeat
         padding-box;
       background-position: center;
       background-size: contain;
+      z-index: 100;
     }
   }
   &__offline-image {
     &--cloud {
       @include absCenter;
       width: 48rem;
-      top: 25%;
+      top: 60%;
       left: 54%;
       background: transparent url("../../images/cloud@2x.png") 0% 0% no-repeat
         padding-box;
@@ -198,11 +308,13 @@
         no-repeat padding-box;
       background-position: center;
       background-size: contain;
+      display: none;
     }
     &--plus {
       @include absCenter;
-      top: 43%;
+      top: 0%;
       width: 3rem;
+      transform: scale(1, 1.2) translate(-50%, -50%);
       background: transparent url("../../images/Union 1@2x.png") 0% 0% no-repeat
         padding-box;
       background-position: center;
@@ -216,6 +328,8 @@
         padding-box;
       background-position: center;
       background-size: contain;
+      top: 80%;
+      opacity: 0;
     }
     &--card {
       @include absCenter;
@@ -226,43 +340,49 @@
         no-repeat padding-box;
       background-position: center;
       background-size: contain;
+      display: none;
     }
     &--light {
       @include absCenter;
       top: 8%;
       left: 47%;
       width: 18rem;
+      top: 24%;
+      opacity: 0;
       background: transparent url("../../images/light@2x.png") 0% 0% no-repeat
         padding-box;
       background-position: center;
       background-size: contain;
+      z-index: 100;
     }
   }
   &__trace-image {
     &--spotlight {
       @include absCenter;
-      background: url("../../images/spotlight_2@2x.png"),
-        linear-gradient(180deg, #2f3f56 82%, #22324f);
-      // background: transparent url("../../images/spotlight_2@2x.png") 0% 0%
-      //   no-repeat padding-box;
+      top: 80%;
+      // background: url("../../images/spotlight_2@2x.png"),
+      //   linear-gradient(180deg, #2f3f56 82%, #22324f);
+      background: transparent url("../../images/spotlight_2@2x.png") 0% 0%
+        no-repeat padding-box;
       background-position: center;
       background-size: contain;
       background-blend-mode: color-dodge;
     }
     &--card {
       @include absCenter;
-
       width: 20rem;
       background: transparent url("../../images/CAFECA_4@2x.png") 0% 0%
         no-repeat padding-box;
       background-position: center;
       background-size: contain;
+      display: none;
     }
     &--keyprint {
       @include absCenter;
-      top: 0%;
-      left: 47%;
-      width: 24rem;
+      top: -25%;
+      left: 50%;
+      width: 30rem;
+      transform: translate(-50%, -50%) rotate(-90deg);
       background: transparent url("../../images/keyprint@2x.png") 0% 0%
         no-repeat padding-box;
       background-position: center;
@@ -272,7 +392,7 @@
   &__line-image {
     // width: 90rem;
     height: 30rem;
-    margin: 0rem 0 8rem;
+    margin: 0rem 0rem 8rem;
     &--1 {
       margin-bottom: 10rem;
       background: transparent url("../../images/line01@2x.png") 0% 0% no-repeat
@@ -285,12 +405,14 @@
         padding-box;
       background-position: center;
       background-size: contain;
+      margin: 0rem 0rem 14rem;
     }
     &--3 {
       background: transparent url("../../images/line03@2x.png") 0% 0% no-repeat
         padding-box;
       background-position: center;
       background-size: contain;
+      margin: 4rem 0rem 14rem 14rem;
     }
   }
   &__buttons {
@@ -301,6 +423,7 @@
   }
   &__button {
     min-width: 18rem;
+    z-index: 1;
   }
   &__button:first-child {
     background-color: $color-blue;
@@ -350,6 +473,43 @@
     }
     &__button {
       min-width: 12rem;
+    }
+    &.finger &__intro-image--card {
+      top: 238%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-15deg) scale(1.25);
+    }
+    &.finger &__finger-image--fingerprint {
+      transition-delay: 1.5s;
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(0.75);
+    }
+
+    &.offline &__intro-image--card {
+      top: 516%;
+      left: -2%;
+      // transform: translate(-50%, -50%) scale(0.75) rotate(15deg);
+      transform: matrix(0.52, 0.3, -0.02, 0.58, 0, 0);
+    }
+    &.device &__intro-image--card {
+      top: 808%;
+      left: 21%;
+      transform: matrix(0.78, -0.4, 0, 0.93, 0, 0);
+    }
+    &.trace &__intro-image--card {
+      top: 1136%;
+      left: 22%;
+      transform: matrix(0.9, 0, 0, 0.9, 0, 0);
+    }
+    &__line-image {
+      &--1 {
+      }
+      &--2 {
+        margin: 0rem 0rem 8rem;
+      }
+      &--3 {
+        margin: 0rem 0rem 8rem;
+      }
     }
   }
 }
