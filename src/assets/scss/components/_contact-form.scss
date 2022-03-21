@@ -106,6 +106,8 @@
       height: 100%;
       transition: transform 0.8s;
       transform-style: preserve-3d;
+      transform: translate(-100%, 0%) rotateY(-180deg);
+      transition: all 1.5s ease-in;
     }
     &--front,
     &--back {
@@ -120,6 +122,7 @@
         no-repeat padding-box;
       background-position: center;
       background-size: contain;
+      transform: rotateY(0deg);
     }
     &--back {
       background: transparent url("../../images/CAFECA_3@2x.png") 0% 0%
@@ -136,7 +139,7 @@
     z-index: 2;
   }
   &__header,
-  &__image-box,
+  // &__image-box,
   &__form-box {
     opacity: 0;
     transition: all 1s ease-in-out;
@@ -144,17 +147,22 @@
   &__header {
     transform: translateY(-100%);
   }
-  &__image-box {
-    transform: translateY(80%);
-  }
+  // &__image-box {
+  //   // transform: translateY(80%);
+  // }
   &__form-box {
     transform: translateX(60%);
   }
   &.active &__header,
-  &.active &__image-box,
+  // &.active &__image-box,
   &.active &__form-box {
     opacity: 1;
     transform: translate(0%);
+  }
+  &.active &__image--inner{
+    // animation: 3s ease-in-out left-roatein;
+    // animation-fill-mode: forwards;
+    transform: translate(0%, 0%) rotateY(23deg) rotateX(8deg);
   }
 }
 

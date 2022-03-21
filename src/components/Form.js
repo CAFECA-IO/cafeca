@@ -98,7 +98,7 @@ const ContactForm = (props) => {
     var windowHeight = window.innerHeight;
     var elementTop = containerRef.current.getBoundingClientRect().top;
     // var elementVisible = containerRef.current.clientHeight;
-    var elementVisible = 150;
+    var elementVisible = 600;
     if (elementTop < windowHeight - elementVisible) {
       setTriggered(true);
     } else {
