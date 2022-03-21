@@ -162,7 +162,7 @@
   &.active &__image--inner{
     // animation: 3s ease-in-out left-roatein;
     // animation-fill-mode: forwards;
-    transform: translate(0%, 0%) rotateY(0deg);
+    transform: translate(0%, 0%) rotateY(23deg) rotateX(8deg);
   }
 }
 
