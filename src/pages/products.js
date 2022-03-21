@@ -11,25 +11,12 @@ const Products = (props) => {
   const traceRef = useRef();
 
   const handleWindowScroll = useCallback(() => {
-    var windowHeight = window.innerHeight;
-    var introTop = introRef.current.getBoundingClientRect().top;
-    console.log(
-      `introTop`,
-      introTop,
-      introTop < windowHeight - introRef.current.clientHeight
-    );
-
-    var fingerTop = fingerRef.current.getBoundingClientRect().top;
-    console.log(`fingerTop`, fingerTop);
-
-    var offlineTop = offlineRef.current.getBoundingClientRect().top;
-    console.log(`offlineTop`, offlineTop);
-
-    var deviceTop = deviceRef.current.getBoundingClientRect().top;
-    console.log(`deviceTop`, deviceTop);
-
-    var traceTop = traceRef.current.getBoundingClientRect().top;
-    console.log(`traceTop`, traceTop);
+    let windowHeight = window.innerHeight;
+    let introTop = introRef.current.getBoundingClientRect().top;
+    let fingerTop = fingerRef.current.getBoundingClientRect().top;
+    let offlineTop = offlineRef.current.getBoundingClientRect().top;
+    let deviceTop = deviceRef.current.getBoundingClientRect().top;
+    let traceTop = traceRef.current.getBoundingClientRect().top;
 
     // var elementVisible = 150;
     if (introTop < windowHeight - introRef.current.clientHeight) {
