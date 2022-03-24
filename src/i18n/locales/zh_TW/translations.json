@@ -86,5 +86,8 @@
   "product_title_4": "不怕卡片遺失",
   "product_description_4-1": "CAFECA 使用我們的另一項專利技術，支援 RSA/ECC 金鑰運行，完善的備份卡片回復機制，在你初始化錢包的同時，我們將您的私鑰，連同您的個人指紋資訊，一同加密後碎片化上傳至區塊鏈網路，當你遺失卡片，需要找回錢包的時候，只需要再購入一張 CAFECA ，加上你的指紋，即可恢復。",
   "product_description_4-2": "",
-  "back": "BACK"
+  "back": "BACK",
+  "send_success": "發送成功",
+  "send_failed": "OOPS ！Something went wrong.",
+  "try_again": "TRY AGAIN"
 }

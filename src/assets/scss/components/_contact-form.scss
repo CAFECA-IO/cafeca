@@ -152,6 +152,7 @@
   // }
   &__form-box {
     transform: translateX(60%);
+    // min-height: 56rem;
   }
   &.active &__header,
   // &.active &__image-box,
@@ -159,10 +160,24 @@
     opacity: 1;
     transform: translate(0%);
   }
-  &.active &__image--inner{
+  &.active &__image--inner {
     // animation: 3s ease-in-out left-roatein;
     // animation-fill-mode: forwards;
     transform: translate(0%, 0%) rotateY(23deg) rotateX(8deg);
+  }
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50rem;
+    justify-content: center;
+    & .button {
+      max-width: 18rem;
+      margin-top: 15rem;
+    }
+  }
+  &__success-text {
+    margin-top: 15rem;
   }
 }
 

@@ -1,13 +1,18 @@
-.button{
-    display: inline-block;
-    text-align: center;
-    color: $color-white;
-    &--primary{
-        border-radius: 4rem;
-        border: 2px solid $color-blue;
-        padding: 1.4rem 4rem;
-    }
-    &--primary:hover{
-        background-color: $color-blue;
-    }
+.button {
+  display: inline-block;
+  text-align: center;
+  color: $color-white;
+  &--primary {
+    border-radius: 4rem;
+    border: 2px solid $color-blue;
+    padding: 1.4rem 4rem;
+  }
+  &--primary:hover {
+    background-color: $color-blue;
+  }
+  &:disabled {
+    background-color: #b5c0cf;
+    border-color: #b5c0cf;
+    cursor:not-allowed;
+  }
 }
