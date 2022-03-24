@@ -1,6 +1,10 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import emailjs from "@emailjs/browser";
+import Lottie from "react-lottie";
+import * as loadingData from "../assets/lf30_editor_qq50zmen.json";
+import * as successData from "../assets/lf30_editor_td2mik0j.json";
+import * as errorData from "../assets/lf30_editor_5idtivl4.json";
 
 export const Form = (props) => {
   const nameRef = useRef();
@@ -36,25 +40,9 @@ export const Form = (props) => {
       }`,
       message: messageRef.current.value,
     };
-
-    console.log(templateParams);
-
-    // emailjs
-    //   .sendForm(
-    //     process.env.REACT_APP_EMAILJS_SERVICE_ID,
-    //     process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-    //     templateParams,
-    //     process.env.REACT_APP_EMAILJS_USER_ID
-    //   )
-    //   .then(
-    //     (result) => {
-    //       console.log(result.text);
-    //     },
-    //     (error) => {
-    //       console.log(error.text);
-    //     }
-    //   );
+    props.sendEmail(templateParams);
   };
+
   return (
     <form className="form" onSubmit={sendEmail}>
       <div className="form__input-group">
@@ -175,8 +163,36 @@ export const Form = (props) => {
 
 const ContactForm = (props) => {
   const { t } = useTranslation();
-  const [triggered, setTriggered] = React.useState(false);
   const containerRef = useRef();
+  const [triggered, setTriggered] = React.useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [success, setSuccess] = useState(null);
+
+  const sendEmail = (templateParams) => {
+    console.log(templateParams);
+    setIsLoading(true);
+    emailjs
+      .send(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        templateParams,
+        process.env.REACT_APP_EMAILJS_USER_ID
+      )
+      .then(
+        (result) => {
+          setSuccess(true);
+          setIsLoading(false);
+          const timer = setTimeout(() => {
+            setSuccess(null);
+            clearTimeout(timer);
+          }, 4500);
+        },
+        (error) => {
+          setIsLoading(false);
+          setSuccess(false);
+        }
+      );
+  };
 
   const handleWindowScroll = useCallback(() => {
     var windowHeight = window.innerHeight;
@@ -189,6 +205,31 @@ const ContactForm = (props) => {
       setTriggered(false);
     }
   }, [containerRef]);
+
+  const loadingOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: loadingData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+  const successOptions = {
+    loop: false,
+    autoplay: true,
+    animationData: successData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+  const errorOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: errorData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
 
   useEffect(() => {
     window.addEventListener("scroll", handleWindowScroll);
@@ -222,7 +263,29 @@ const ContactForm = (props) => {
             </div>
           </div>
           <div className="contact-form__form-box">
-            <Form />
+            {!isLoading && success === null && <Form sendEmail={sendEmail} />}
+            {isLoading && (
+              <div className="contact-form__box">
+                <Lottie options={loadingOptions} height={200} width={320} />
+              </div>
+            )}
+            {!isLoading && success && (
+              <div className="contact-form__box">
+                <Lottie options={successOptions} height={200} width={320} />
+                <h4 className="header-primary contact-form__success-text">
+                  {t("send_success")}
+                </h4>{" "}
+              </div>
+            )}
+            {!isLoading && success === false && (
+              <div className="contact-form__box">
+                <Lottie options={errorOptions} height={200} width={320} />
+                <h4 className="header-primary">{t("send_failed")}</h4>
+                <button className="button button--primary">
+                  <h4 className="header-primary">{t("try_again")}</h4>
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </div>
