@@ -69,33 +69,37 @@
     gap: 1.2rem;
     align-items: center;
   }
-  &__item &__item--decoration {
+  &__item.checked &__item--decoration {
     width: 2.4rem;
     height: 2.4rem;
-    border: 2px solid $color-white;
-    border-radius: 100%;
-    opacity: 0;
+    // border: 2px solid $color-white;
+    // border-radius: 100%;
+    // opacity: 0;
+    background: transparent url(../../images/icon-Check@2x.png) 0% 0% no-repeat
+      padding-box;
+    background-position: center;
+    background-size: contain;
   }
   &__item &__item--decoration > div {
-    width: 2rem;
-    height: 1rem;
-    transform: rotate(-45deg) translate(3px, 2px);
-    padding: 1px;
-    border-left: 2px solid $color-white;
-    border-bottom: 2px solid $color-white;
-    border-image-slice: 1;
-    -webkit-border-image: linear-gradient(
-      90deg,
-      $color-primary 0%,
-      $color-secondary 47%,
-      $color-tertiary 100%
-    );
-    border-image-source: linear-gradient(
-      90deg,
-      $color-primary 0%,
-      $color-secondary 47%,
-      $color-tertiary 100%
-    );
+    // width: 2rem;
+    // height: 1rem;
+    // transform: rotate(-45deg) translate(3px, 2px);
+    // padding: 1px;
+    // border-left: 2px solid $color-white;
+    // border-bottom: 2px solid $color-white;
+    // border-image-slice: 1;
+    // -webkit-border-image: linear-gradient(
+    //   90deg,
+    //   $color-primary 0%,
+    //   $color-secondary 47%,
+    //   $color-tertiary 100%
+    // );
+    // border-image-source: linear-gradient(
+    //   90deg,
+    //   $color-primary 0%,
+    //   $color-secondary 47%,
+    //   $color-tertiary 100%
+    // );
   }
   &__item.checked &__item--decoration {
     opacity: 1;
