@@ -85,16 +85,16 @@
       // animation: country_counter 5s forwards alternate ease-in-out;
       counter-reset: num var(--country);
     }
-    &--country::after {
-      content: counter(num);
-    }
+    // &--country::after {
+    //   content: counter(num);
+    // }
     &--user {
       // animation: user_counter 5s forwards alternate ease-in-out;
       counter-reset: num var(--user);
     }
-    &--user::after {
-      content: counter(num);
-    }
+    // &--user::after {
+    //   content: counter(num);
+    // }
     &--CAGR {
       // animation: CAGR_counter 5s forwards alternate ease-in-out;
       transition: --percent 1s;
@@ -103,9 +103,9 @@
       --v2: max((var(--temp) - var(--v1)) * 100 - 0.5, 0);
       counter-reset: v1 var(--v1) v2 var(--v2);
     }
-    &--CAGR::before {
-      content: counter(v1) "." counter(v2, decimal-leading-zero);
-    }
+    // &--CAGR::before {
+    //   content: counter(v1) "." counter(v2, decimal-leading-zero);
+    // }
   }
   &__container {
     display: flex;

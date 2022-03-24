@@ -50,12 +50,6 @@
   }
   &__tab.active {
     border-image-slice: 1;
-    -webkit-border-image: linear-gradient(
-      90deg,
-      $color-primary 0%,
-      $color-secondary 47%,
-      $color-tertiary 100%
-    );
     border-image-source: linear-gradient(
       90deg,
       $color-primary 0%,

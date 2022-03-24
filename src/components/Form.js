@@ -1,22 +1,93 @@
-import React, { useCallback, useEffect, useRef } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
+import emailjs from "@emailjs/browser";
 
 export const Form = (props) => {
+  const nameRef = useRef();
+  const companyRef = useRef();
+  const emailRef = useRef();
+  const phoneRef = useRef();
+  const technicalRef = useRef();
+  const cooperationRef = useRef();
+  const priceRef = useRef();
+  const othersRef = useRef();
+  const messageRef = useRef();
+  const [isValid, setIsVaild] = useState(false);
   const { t } = useTranslation();
 
-  return (
-    <form className="form">
-      <div className="form__input-group">
-        <input className="form__input" type="text" placeholder={t("name")} />
-        <input className="form__input" type="text" placeholder={t("company")} />
-      </div>
-      <div className="form__input-group">
-        <input className="form__input" type="email" placeholder={t("email")} />
-      </div>
-      <div className="form__input-group">
-        <input className="form__input" type="number" placeholder={t("phone")} />
-      </div>
+  const handleValidation = () => {
+    if (emailRef.current?.value && messageRef.current?.value) {
+      setIsVaild(true);
+    } else {
+      setIsVaild(false);
+    }
+  };
+  const sendEmail = (e) => {
+    e.preventDefault();
+    let templateParams = {
+      name: nameRef.current.value,
+      company: companyRef.current.value,
+      email: emailRef.current.value,
+      phone: phoneRef.current.value,
+      messageType: `${technicalRef.current.checked ? "technical" : ""}${
+        cooperationRef.current.checked ? ", cooperation" : ""
+      }${priceRef.current.checked ? ", price" : ""}${
+        othersRef.current.checked ? ", others" : ""
+      }`,
+      message: messageRef.current.value,
+    };
 
+    console.log(templateParams);
+
+    // emailjs
+    //   .sendForm(
+    //     process.env.REACT_APP_EMAILJS_SERVICE_ID,
+    //     process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+    //     templateParams,
+    //     process.env.REACT_APP_EMAILJS_USER_ID
+    //   )
+    //   .then(
+    //     (result) => {
+    //       console.log(result.text);
+    //     },
+    //     (error) => {
+    //       console.log(error.text);
+    //     }
+    //   );
+  };
+  return (
+    <form className="form" onSubmit={sendEmail}>
+      <div className="form__input-group">
+        <input
+          className="form__input"
+          type="text"
+          placeholder={t("name")}
+          ref={nameRef}
+        />
+        <input
+          className="form__input"
+          type="text"
+          placeholder={t("company")}
+          ref={companyRef}
+        />
+      </div>
+      <div className="form__input-group">
+        <input
+          className="form__input"
+          type="email"
+          placeholder={t("email")}
+          ref={emailRef}
+          onInput={handleValidation}
+        />
+      </div>
+      <div className="form__input-group">
+        <input
+          className="form__input"
+          type="text"
+          placeholder={t("phone")}
+          ref={phoneRef}
+        />
+      </div>
       <div className="form__checkboxs">
         <div className="form__checkboxs-group">
           <div className="form__checkbox-group">
@@ -24,6 +95,8 @@ export const Form = (props) => {
               className="form__checkbox-controller"
               type="checkbox"
               id="tech"
+              name="technical"
+              ref={technicalRef}
             />
             <label className="form__label" htmlFor="tech">
               <div className="form__checkbox">
@@ -37,6 +110,8 @@ export const Form = (props) => {
               className="form__checkbox-controller"
               type="checkbox"
               id="cooperate"
+              name="cooperation"
+              ref={cooperationRef}
             />
             <label className="form__label" htmlFor="cooperate">
               <div className="form__checkbox">
@@ -52,6 +127,8 @@ export const Form = (props) => {
               className="form__checkbox-controller"
               type="checkbox"
               id="price"
+              name="price"
+              ref={priceRef}
             />
             <label className="form__label" htmlFor="price">
               <div className="form__checkbox">
@@ -65,6 +142,8 @@ export const Form = (props) => {
               className="form__checkbox-controller"
               type="checkbox"
               id="other"
+              name="others"
+              ref={othersRef}
             />
             <label className="form__label" htmlFor="other">
               <div className="form__checkbox">
@@ -80,9 +159,14 @@ export const Form = (props) => {
           className="form__textarea"
           rows="5"
           placeholder={t("what_else")}
+          ref={messageRef}
+          onInput={handleValidation}
         ></textarea>
       </div>
-      <button className="form__button button button--primary" href="/products">
+      <button
+        className="form__button button button--primary"
+        disabled={!isValid}
+      >
         <h4 className="header-primary">{t("send")}</h4>
       </button>
     </form>
