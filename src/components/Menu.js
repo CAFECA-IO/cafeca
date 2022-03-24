@@ -6,28 +6,22 @@ const Menu = (props) => {
   const { t } = useTranslation();
 
   return (
-    <ul
+    <div
       className={`menu${props.menuOpen ? " active" : ""}`}
       onClick={props.closeMenuHandler}
     >
       <div className="menu__container">
-        <li className="menu__item">
-          <a className="menu__link" href="/about">
-            {t("about_us")}
-          </a>
-        </li>
-        <li className="menu__item">
-          <a className="menu__link" href="/products">
-            {t("products_introduction")}
-          </a>
-        </li>
-        <li className="menu__item">
-          <a className="menu__link" href="/">
-            {t("back_to_home")}
-          </a>
-        </li>
+        <a className="menu__link" href="/about">
+          <h3 className="menu__item header-secondary ">{t("about_us")}</h3>
+        </a>
+        <a className="menu__link" href="/products">
+          <h3 className="menu__item header-secondary ">{t("products_introduction")}</h3>
+        </a>
+        <a className="menu__link" href="/">
+          <h3 className="menu__item header-secondary ">{t("back_to_home")}</h3>
+        </a>
       </div>
-    </ul>
+    </div>
   );
 };
 
