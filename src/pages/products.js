@@ -18,21 +18,40 @@ const Products = (props) => {
     let deviceTop = deviceRef.current.getBoundingClientRect().top;
     let traceTop = traceRef.current.getBoundingClientRect().top;
 
-    // var elementVisible = 150;
-    if (introTop < windowHeight - introRef.current.clientHeight) {
-      setCurrentContent((prev) => (prev !== "intro" ? "finger-back" : "intro"));
+    console.log(offlineRef.current.getBoundingClientRect());
+    console.log(
+      offlineTop < windowHeight - offlineRef.current?.clientHeight / 2
+    );
+    console.log(offlineTop > -offlineRef.current?.clientHeight / 2);
+    if (
+      introTop < windowHeight - introRef.current?.clientHeight / 2 &&
+      introTop > -introRef.current?.clientHeight / 2
+    ) {
+      setCurrentContent("finger-back");
     }
-    if (fingerTop < windowHeight - fingerRef.current.clientHeight) {
-       setCurrentContent("finger");
+    if (
+      fingerTop < windowHeight - fingerRef.current?.clientHeight / 2 &&
+      fingerTop > -fingerRef.current?.clientHeight / 2
+    ) {
+      setCurrentContent("finger");
     }
-    if (offlineTop < windowHeight - offlineRef.current.clientHeight) {
-       setCurrentContent("offline");
+    if (
+      offlineTop < windowHeight - offlineRef.current?.clientHeight / 2 &&
+      offlineTop > -offlineRef.current?.clientHeight / 2
+    ) {
+      setCurrentContent("offline");
     }
-    if (deviceTop < windowHeight - deviceRef.current.clientHeight) {
-       setCurrentContent("device");
+    if (
+      deviceTop < windowHeight - deviceRef.current?.clientHeight / 2 &&
+      deviceTop > -deviceRef.current?.clientHeight / 2
+    ) {
+      setCurrentContent("device");
     }
-    if (traceTop < windowHeight - traceRef.current.clientHeight) {
-       setCurrentContent("trace");
+    if (
+      traceTop < windowHeight - traceRef.current?.clientHeight / 2 &&
+      traceTop > -traceRef.current?.clientHeight / 2
+    ) {
+      setCurrentContent("trace");
     }
   }, []);
 
