@@ -37,7 +37,7 @@ const Data = (props) => {
     // if (!triggered) {
     if (
       elementTop < windowHeight - elementVisible / 2 &&
-      elementTop > -elementVisible / 2
+      elementTop > - elementVisible / 2
     ) {
       setTriggered(true);
       if (!triggered) {
