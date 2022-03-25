@@ -55,6 +55,11 @@ const Footer = (props) => {
                 <p className="header-primary">{t("contact_us")}</p>
               </li>
             </a>
+            <a href="/privacy">
+              <li className="footer__info">
+                <p className="header-primary">{t("privacy")}</p>
+              </li>
+            </a>
           </ul>
         </div>
       </div>

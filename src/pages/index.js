@@ -4,6 +4,7 @@ import Layout from "../components/Layout";
 import About from "./about";
 import Landing from "./landing";
 import Products from "./products";
+import Privacy from "./privacy";
 
 const Index = () => {
   return (
@@ -12,6 +13,7 @@ const Index = () => {
         <Route exact path="/" element={<Landing />} />
         <Route path="/about" element={<About />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/privacy" element={<Privacy />} />
       </Routes>
     </Layout>
   );
