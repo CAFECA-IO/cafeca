@@ -18,11 +18,11 @@ const Products = (props) => {
     let deviceTop = deviceRef.current.getBoundingClientRect().top;
     let traceTop = traceRef.current.getBoundingClientRect().top;
 
-    console.log(offlineRef.current.getBoundingClientRect());
-    console.log(
-      offlineTop < windowHeight - offlineRef.current?.clientHeight / 2
-    );
-    console.log(offlineTop > -offlineRef.current?.clientHeight / 2);
+    // console.log(offlineRef.current.getBoundingClientRect());
+    // console.log(
+    //   offlineTop < windowHeight - offlineRef.current?.clientHeight / 2
+    // );
+    // console.log(offlineTop > -offlineRef.current?.clientHeight / 2);
     if (
       introTop < windowHeight - introRef.current?.clientHeight / 2 &&
       introTop > -introRef.current?.clientHeight / 2
