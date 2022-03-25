@@ -104,6 +104,7 @@
   &__image {
     min-width: 42rem;
     min-height: 40rem;
+    mix-blend-mode: screen;
   }
   &__tab-content:nth-child(1) &__image {
     background: url(../../images/bank.svg) no-repeat center;
