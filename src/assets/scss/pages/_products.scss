@@ -291,10 +291,10 @@
       width: 48rem;
       top: 60%;
       left: 54%;
-      background: transparent url("../../images/cloud@2x.png") 0% 0% no-repeat
-        padding-box;
-      // background: url("../../images/cloud@2x.png"),
-      //   linear-gradient(180deg, #373f49, #38414d);
+      // background: transparent url("../../images/cloud@2x.png") 0% 0% no-repeat
+      //   padding-box;
+      background: url("../../images/cloud.svg"),
+        linear-gradient(180deg, #37404a, #39424e);
       background-blend-mode: color-dodge;
       background-position: center;
       background-size: contain;
@@ -360,10 +360,10 @@
     &--spotlight {
       @include absCenter;
       top: 80%;
-      // background: url("../../images/spotlight_2@2x.png"),
-      //   linear-gradient(180deg, #2f3f56 82%, #22324f);
-      background: transparent url("../../images/spotlight_2@2x.png") 0% 0%
-        no-repeat padding-box;
+      background: url("../../images/spotlight_2@2x.png"),
+        linear-gradient(180deg, #3d4b5d 12%, #243450);
+      // background: transparent url("../../images/spotlight_2@2x.png") 0% 0%
+      //   no-repeat padding-box;
       background-position: center;
       background-size: contain;
       background-blend-mode: color-dodge;

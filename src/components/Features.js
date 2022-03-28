@@ -52,7 +52,7 @@ const Features = (props) => {
         "financial_description_3",
         "financial_description_4",
       ],
-      img: "bank@2x.png",
+      img: "bank.svg",
     },
     rent: {
       des: [
@@ -61,7 +61,7 @@ const Features = (props) => {
         "rent_description_3",
         "rent_description_4",
       ],
-      img: "renting@2x.png",
+      img: "renting.svg",
     },
     travel: {
       des: [
@@ -70,7 +70,7 @@ const Features = (props) => {
         "travel_description_3",
         "travel_description_4",
       ],
-      img: "travel_@2x.png",
+      img: "travel.svg",
     },
     government: {
       des: [
@@ -79,7 +79,7 @@ const Features = (props) => {
         "government_description_3",
         "government_description_4",
       ],
-      img: "gov@2x.png",
+      img: "gov.svg",
     },
   };
   return (
@@ -106,7 +106,7 @@ const Features = (props) => {
                 ))}
               </ul>
               <div className="features__image">
-                {/* <img
+                {/* <embed
                   src={require("../assets/images/" + contents[key].img)}
                   alt="keys"
                 /> */}
