@@ -97,3 +97,9 @@
     }
   }
 }
+
+@include respond(tab-port) {
+  .header {
+    background: rgba(#3E4C5E, 1) 0% 0% no-repeat padding-box;
+  }
+}
