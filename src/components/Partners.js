@@ -11,7 +11,11 @@ const Slider = ({
 }) => {
   return (
     <div className="slider">
-      <div className="slider__controllers">
+      <div
+        className={`slider__controllers${
+          childrenLength <= 3 ? " disabled" : ""
+        }`}
+      >
         <button
           className="slider__btn slider__btn--left"
           onClick={clickLeftHandler}
