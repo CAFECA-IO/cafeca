@@ -33,11 +33,11 @@ const Footer = (props) => {
                 <p className="header-primary">{t("product_info")}</p>
               </li>
             </a>
-            <a href="/#contact-us">
+            {/* <a href="/#contact-us"> */}
               <li className="footer__info">
                 <p className="header-primary">{t("become_partner")}</p>
               </li>
-            </a>
+            {/* </a> */}
           </ul>
         </div>
         <div className="footer__content">
@@ -50,11 +50,11 @@ const Footer = (props) => {
                 <p className="header-primary">{t("about_us")}</p>
               </li>
             </a>
-            <a href="/#contact-us">
+            {/* <a href="/#contact-us"> */}
               <li className="footer__info">
                 <p className="header-primary">{t("contact_us")}</p>
               </li>
-            </a>
+            {/* </a> */}
             <a href="/privacy">
               <li className="footer__info">
                 <p className="header-primary">{t("privacy")}</p>

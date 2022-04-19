@@ -17,14 +17,18 @@
     display: flex;
     flex: auto;
     align-items: center;
-    gap: 4rem;
+    // gap: 4rem;
     margin-bottom: 2rem;
   }
   &__checkboxs-group {
     display: flex;
-    flex: auto;
+    // flex: auto;
     align-items: center;
-    justify-content: space-between;
+    // justify-content: space-between;
+  }
+  &__checkboxs-group:not(:last-child),
+  &__checkbox-group:not(:last-child){
+    margin-right: 2rem;
   }
   &__checkbox-controller {
     display: none;
