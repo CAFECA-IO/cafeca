@@ -38,7 +38,13 @@ const Slider = ({
   );
 };
 
-const partners = ["Logo01@2x.png", "isuncloud_W.png", "boltchain_logo_squre_W.png"];
+const partners = [
+  "Logo01@2x.png",
+  "isuncloud_W.png",
+  "boltchain_logo_squre_W.png",
+  "Logo02@2x.png",
+  "Logo03@2x.png",
+];
 
 const Partners = (props) => {
   const { t } = useTranslation();
