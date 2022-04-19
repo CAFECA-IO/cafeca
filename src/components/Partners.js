@@ -11,7 +11,11 @@ const Slider = ({
 }) => {
   return (
     <div className="slider">
-      <div className="slider__controllers">
+      <div
+        className={`slider__controllers${
+          childrenLength <= 3 ? " disabled" : ""
+        }`}
+      >
         <button
           className="slider__btn slider__btn--left"
           onClick={clickLeftHandler}
@@ -38,7 +42,13 @@ const Slider = ({
   );
 };
 
-const partners = ["Logo01@2x.png", "Logo02@2x.png", "Logo03@2x.png"];
+const partners = [
+  "Logo01@2x.png",
+  "isuncloud_W.png",
+  "boltchain_logo_squre_W.png",
+  "Logo02@2x.png",
+  "Logo03@2x.png",
+];
 
 const Partners = (props) => {
   const { t } = useTranslation();

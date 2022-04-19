@@ -118,6 +118,9 @@ const Products = (props) => {
             <p className="products__description header-secondary">
               {t("product_description_2-2")}
             </p>
+            <p className="products__description header-secondary">
+              {t("product_description_2-3")}
+            </p>
           </div>
         </div>
         <div className="products__line-image products__line-image--2"></div>

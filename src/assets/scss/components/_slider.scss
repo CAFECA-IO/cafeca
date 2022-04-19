@@ -1,22 +1,30 @@
 .slider {
   position: relative;
   &__container {
-    max-width: 90rem;
+    max-width: 95rem;
     margin: 0 auto;
+    overflow: hidden;
   }
   &__content {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    // align-items: flex-start;
     justify-content: space-around;
     transition: all 0.5s ease-in;
+    // overflow: hidden;
+    gap: 10rem;
   }
   &__controllers {
-    display: none;
+    display: flex;
     position: absolute;
-    top: 0;
+    top: 5rem;
     left: 0;
     right: 0;
     justify-content: space-between;
+    z-index: 10;
+  }
+  &__controllers.disabled {
+    display: none;
   }
   &__btn {
     height: 11rem;
@@ -46,14 +54,24 @@
   }
 }
 
+@include respond(tab-land) {
+  .slider {
+    &__btn {
+      width: 6rem;
+    }
+    &__btn--left > div {
+      transform: rotate(135deg) translate(-2.5rem, -2.5rem);
+    }
+  }
+}
+
 @include respond(phone) {
   .slider {
-    &__controllers {
-      display: flex;
+    &__btn {
+      width: 14.2rem;
     }
-    &__content {
-      gap: 10rem;
-      // transform: translateX(35rem);
+    &__btn--left > div {
+      transform: rotate(135deg) translate(-8.5rem, -8.5rem);
     }
     &__container {
       max-width: 30rem;

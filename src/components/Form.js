@@ -239,7 +239,7 @@ const ContactForm = (props) => {
   return (
     <div
       className={`contact-form${triggered ? " active" : ""}`}
-      id="contact-us"
+      // id="contact-us"
       ref={containerRef}
     >
       <div className="contact-form__background contact-form__background--1"></div>

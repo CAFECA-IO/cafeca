@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
+import { useStateport } from "../provider/StateProvider";
 
 const animateValue = (element, start, end, duration, isDecimal) => {
   let startTimestamp = null;
@@ -18,6 +19,7 @@ const animateValue = (element, start, end, duration, isDecimal) => {
 
 const Data = (props) => {
   const { t } = useTranslation();
+  const { languageKey } = useStateport();
   const [triggered, setTriggered] = React.useState(false);
   const containerRef = useRef();
   const countryRef = useRef();
@@ -37,19 +39,20 @@ const Data = (props) => {
     // if (!triggered) {
     if (
       elementTop < windowHeight - elementVisible / 2 &&
-      elementTop > - elementVisible / 2
+      elementTop > -elementVisible / 2
     ) {
       setTriggered(true);
       if (!triggered) {
         animateValue(countryRef.current, 0, 70, 500);
         animateValue(CAGRRef.current, 0, 54.8, 800, true);
-        animateValue(userRef.current, 0, 6300, 1000);
+        if (languageKey === "en_us") animateValue(userRef.current, 0, 63, 1000);
+        else animateValue(userRef.current, 0, 6300, 1000);
       }
     } else {
       setTriggered(false);
     }
     // }
-  }, [triggered, countryRef, CAGRRef, userRef]);
+  }, [triggered, countryRef, CAGRRef, userRef, languageKey]);
 
   // const addObserver = (element, options) => {
   //   let io_observer = new IntersectionObserver((entries, observer) => {
